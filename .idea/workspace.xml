@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="" />
+    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/blogs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/home.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,36 +45,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ArticlesNewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BlogsnewsApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.BlogsnewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoginApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ReportsNewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ReportsnewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SpacenewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.SpaceNews.articlesfeed.SpacenewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.SpaceNews.blogsfeed.BlogsnewsApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.run.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.com.SpaceNews.articlesfeed in feed_service.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.SpaceNews [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.SpaceNews [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/hp/spacenews&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ApiGatewayApplication.executor": "Run",
+    "Application.ArticlesNewsApplication.executor": "Run",
+    "Application.BlogsnewsApplication (1).executor": "Run",
+    "Application.BlogsnewsApplication.executor": "Run",
+    "Application.EurekaServerApplication.executor": "Run",
+    "Application.LoginApplication.executor": "Run",
+    "Application.ReportsNewsApplication.executor": "Run",
+    "Application.ReportsnewsApplication.executor": "Run",
+    "Application.SpacenewsApplication.executor": "Run",
+    "Application.com.SpaceNews.articlesfeed.SpacenewsApplication.executor": "Run",
+    "Application.com.SpaceNews.blogsfeed.BlogsnewsApplication.executor": "Run",
+    "Application.run.executor": "Run",
+    "JUnit.com.SpaceNews.articlesfeed in feed_service.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.SpaceNews [install].executor": "Run",
+    "Maven.SpaceNews [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "19",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/SpaceNews",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.SpaceNews.reportsfeed" />
