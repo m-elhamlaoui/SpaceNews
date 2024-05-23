@@ -1,0 +1,10 @@
+com\SpaceNews\blogsfeed\BlogsService.class
+com\SpaceNews\blogsfeed\BlogsController.class
+com\SpaceNews\blogsfeed\CustomErrorControllerBlogs.class
+com\SpaceNews\blogsfeed\ApiResponseBlogs.class
+com\SpaceNews\blogsfeed\blog$Launch.class
+com\SpaceNews\blogsfeed\AppConfigBlogs.class
+com\SpaceNews\blogsfeed\BlogsService$1.class
+com\SpaceNews\blogsfeed\blog$Event.class
+com\SpaceNews\blogsfeed\BlogsnewsApplication.class
+com\SpaceNews\blogsfeed\blog.class

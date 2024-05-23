@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: blogs_feed_service
+server:
+  port: 8082

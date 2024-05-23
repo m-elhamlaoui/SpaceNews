@@ -1,0 +1,8 @@
+com\SpaceNews\reportsfeed\ReportsController.class
+com\SpaceNews\reportsfeed\CustomErrorController.class
+com\SpaceNews\reportsfeed\ReportsNewsApplication.class
+com\SpaceNews\reportsfeed\ReportsService.class
+com\SpaceNews\reportsfeed\ApiResponseReports.class
+com\SpaceNews\reportsfeed\ReportsService$1.class
+com\SpaceNews\reportsfeed\AppConfigReports.class
+com\SpaceNews\reportsfeed\report.class

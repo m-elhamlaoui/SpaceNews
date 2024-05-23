@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: articles_feed_service
+server:
+  port: 8083

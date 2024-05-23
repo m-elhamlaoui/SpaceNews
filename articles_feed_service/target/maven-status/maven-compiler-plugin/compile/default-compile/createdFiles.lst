@@ -1,0 +1,10 @@
+com\SpaceNews\articlesfeed\article.class
+com\SpaceNews\articlesfeed\AppConfig.class
+com\SpaceNews\articlesfeed\ArticlesNewsApplication.class
+com\SpaceNews\articlesfeed\article$Launch.class
+com\SpaceNews\articlesfeed\SpaceflightNewsService.class
+com\SpaceNews\articlesfeed\article$Event.class
+com\SpaceNews\articlesfeed\SpaceflightNewsController.class
+com\SpaceNews\articlesfeed\CustomErrorController.class
+com\SpaceNews\articlesfeed\ApiResponse.class
+com\SpaceNews\articlesfeed\SpaceflightNewsService$1.class
