@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blogs_feed_service/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/articles_feed_service/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/articles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports_feed_service/src/main/resources/templates/home.html" afterDir="false" />
-    </list>
+    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="chatbot" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +181,20 @@
       <option name="presentableId" value="Default" />
       <updated>1716154334257</updated>
     </task>
+    <task id="LOCAL-00001" summary="chatbot">
+      <option name="closed" value="true" />
+      <created>1716492428788</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716492428788</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chatbot" />
+    <option name="LAST_COMMIT_MESSAGE" value="chatbot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
