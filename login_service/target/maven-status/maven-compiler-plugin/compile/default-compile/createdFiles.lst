@@ -1,0 +1,5 @@
+com\spacenews\Login\UsersModel.class
+com\spacenews\Login\LoginApplication.class
+com\spacenews\Login\UsersService.class
+com\spacenews\Login\UsersController.class
+com\spacenews\Login\UsersRepository.class

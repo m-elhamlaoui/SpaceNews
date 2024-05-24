@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spacenews
+  main:
+    web-application-type: REACTIVE
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+  resources:
+    static-locations: src/main/resources/static, src/main/resources/templates
+
+
+  instance:
+    prefer-ip-address=true:
