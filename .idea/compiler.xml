@@ -15,6 +15,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="articles_feed_service" />
+        <module name="blog_cr_service" />
         <module name="Blogs_feed_service" />
         <module name="reports_feed_service" />
         <module name="Login_service" />
