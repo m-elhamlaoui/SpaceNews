@@ -48,6 +48,7 @@
     "Application.com.SpaceNews.articlesfeed.SpacenewsApplication.executor": "Run",
     "Application.com.SpaceNews.blogsfeed.BlogsnewsApplication.executor": "Run",
     "Application.run.executor": "Run",
+    "JUnit.SpaceflightNewsServiceDESCTest.executor": "Run",
     "JUnit.SpaceflightNewsServiceTest.executor": "Run",
     "JUnit.com.SpaceNews.articlesfeed in feed_service.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
