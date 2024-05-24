@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: blog_cr_service
-server:
-  port: 8092
