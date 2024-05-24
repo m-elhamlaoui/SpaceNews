@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 public class UsersController {
@@ -40,7 +40,7 @@ public class UsersController {
                 UsersModel user = usersService.authenticate(login, password);
                 if (user != null) {
                         // Redirection vers localhost:8083/home
-                        response.setHeader("Location", "http://localhost:8083/home");
+                        response.setHeader("Location", "/articles");
                         response.setStatus(302);
                         return null;
                 } else {

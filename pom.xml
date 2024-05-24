@@ -16,7 +16,12 @@
     <module>Blogs_feed_service</module>
     <module>reports_feed_service</module>
     <module>login_service</module>
+<<<<<<< HEAD
       <module>blog_cr_service</module>
+=======
+      <module>ApiGateway</module>
+    <module>Discovery_service</module>
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
   </modules>
 
   <properties>

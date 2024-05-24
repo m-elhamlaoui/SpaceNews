@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="creation_blog_micro">
       <change afterPath="$PROJECT_DIR$/blog_cr_service/Dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/blog_cr_service/docker-compose.yml" afterDir="false" />
@@ -204,6 +205,9 @@
       <change beforePath="$PROJECT_DIR$/login_service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/login_service/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,6 +254,7 @@
     "Application.BlogCrServiceApplication.executor": "Run",
     "Application.BlogsnewsApplication (1).executor": "Run",
     "Application.BlogsnewsApplication.executor": "Run",
+    "Application.DiscoveryServiceApplication.executor": "Run",
     "Application.EurekaServerApplication.executor": "Run",
     "Application.LoginApplication.executor": "Run",
     "Application.ReportsNewsApplication.executor": "Run",
@@ -268,7 +273,11 @@
     "git-widget-placeholder": "fatima",
     "jdk.selected.JAVA_MODULE": "19",
     "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/User/SpaceNews/blog_cr_service/src/main/resources/templates",
+=======
+    "last_opened_file_path": "C:/Users/hp/SpaceNews/articles_feed_service/src/main/resources/templates",
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -281,11 +290,19 @@
       <recent name="com.SpaceNews.articlesfeed" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="C:\Users\User\SpaceNews\blog_cr_service\src\main\resources\templates" />
       <recent name="C:\Users\User\SpaceNews\blog_cr_service\src\main\resources" />
       <recent name="C:\Users\hp\spacenews" />
       <recent name="C:\Users\hp\spacenews\Blogs_feed_service\src\main\resources" />
       <recent name="C:\Users\hp\spacenews\articles_feed_service\src\main\resources" />
+=======
+      <recent name="C:\Users\hp\SpaceNews\articles_feed_service\src\main\resources\templates" />
+      <recent name="C:\Users\hp\SpaceNews\Discovery_service\src\main\resources" />
+      <recent name="C:\Users\hp\SpaceNews\Discovery_service" />
+      <recent name="C:\Users\hp\spacenews" />
+      <recent name="C:\Users\hp\spacenews\Blogs_feed_service\src\main\resources" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hp\spacenews\eureka-server\src\main\resources" />
@@ -300,7 +317,24 @@
       <recent name="com.SpaceNews.blogsfeed" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.BlogCrServiceApplication">
+=======
+  <component name="RunManager" selected="Application.BlogsnewsApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spacenews.ApiGateway.ApiGatewayApplication" />
+      <module name="ApiGateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spacenews.ApiGateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     <configuration name="ArticlesNewsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.SpaceNews.articlesfeed.ArticlesNewsApplication" />
       <module name="articles_feed_service" />
@@ -340,9 +374,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.eurekaserver.EurekaServerApplication" />
-      <module name="eureka-server" />
+    <configuration name="DiscoveryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spacenews.DiscoveryService.DiscoveryServiceApplication" />
+      <module name="Discovery_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spacenews.DiscoveryService.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -374,10 +414,17 @@
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
       <item itemvalue="Application.BlogCrServiceApplication" />
       <item itemvalue="Application.BlogsnewsApplication" />
       <item itemvalue="Application.LoginApplication" />
       <item itemvalue="Application.EurekaServerApplication" />
+=======
+      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Application.DiscoveryServiceApplication" />
+      <item itemvalue="Application.BlogsnewsApplication" />
+      <item itemvalue="Application.LoginApplication" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
       <item itemvalue="Application.ArticlesNewsApplication" />
     </list>
     <recent_temporary>
@@ -386,7 +433,13 @@
         <item itemvalue="Application.LoginApplication" />
         <item itemvalue="Application.BlogsnewsApplication" />
         <item itemvalue="Application.ArticlesNewsApplication" />
+<<<<<<< HEAD
         <item itemvalue="Application.EurekaServerApplication" />
+=======
+        <item itemvalue="Application.LoginApplication" />
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.DiscoveryServiceApplication" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
       </list>
     </recent_temporary>
   </component>
@@ -399,23 +452,17 @@
       <option name="presentableId" value="Default" />
       <updated>1716154334257</updated>
     </task>
-    <task id="LOCAL-00001" summary="chatbot">
-      <option name="closed" value="true" />
-      <created>1716492428788</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1716492428788</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+<<<<<<< HEAD
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="chatbot" />
     <MESSAGE value="creation_blog_micro" />
     <option name="LAST_COMMIT_MESSAGE" value="creation_blog_micro" />
   </component>
+=======
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <default-breakpoints>

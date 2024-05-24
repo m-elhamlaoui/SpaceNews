@@ -8,6 +8,7 @@
       <directory url="file://$PROJECT_DIR$/ApiGateway/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/eureka-server/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/login_service/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Discovery_service/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -17,14 +18,24 @@
         <module name="articles_feed_service" />
         <module name="blog_cr_service" />
         <module name="Blogs_feed_service" />
+        <module name="Discovery_service" />
         <module name="reports_feed_service" />
         <module name="Login_service" />
+        <module name="ApiGateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ApiGateway" target="17" />
       <module name="eureka-server" target="17" />
       <module name="login_service" target="19" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateway" options="-parameters" />
+      <module name="Blogs_feed_service" options="-parameters" />
+      <module name="Discovery_service" options="-parameters" />
+      <module name="Login_service" options="-parameters" />
+      <module name="articles_feed_service" options="-parameters" />
+    </option>
   </component>
 </project>
