@@ -1,5 +1,10 @@
 spring:
   application:
     name: articles_feed_service
+
 server:
-  port: 8083
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

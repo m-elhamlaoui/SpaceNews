@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/ApiGateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Blogs_feed_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Blogs_feed_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Discovery_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Discovery_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/articles_feed_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/articles_feed_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
