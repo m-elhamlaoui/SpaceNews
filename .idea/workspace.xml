@@ -4,7 +4,210 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="creation_blog_micro">
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/java/com/Spacenews/app/BlogCrController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/java/com/Spacenews/app/BlogCrModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/java/com/Spacenews/app/BlogCrRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/java/com/Spacenews/app/BlogCrService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/java/com/Spacenews/app/BlogCrServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/img/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/img/profile-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/aos/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/aos/aos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap-icons/bootstrap-icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap-icons/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/css/animations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/css/boxicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/css/boxicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/css/transformations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/glightbox/css/glightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/glightbox/css/glightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/glightbox/js/glightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/glightbox/js/glightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/isotope-layout/isotope.pkgd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/isotope-layout/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/php-email-form/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/purecounter/purecounter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/swiper/swiper-bundle.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/swiper/swiper-bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/typed.js/typed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/typed.js/typed.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/typed.js/typed.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/assets/vendor/waypoints/noframework.waypoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/forms/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/static/forms/contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/templates/articles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/templates/blog-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/templates/blogs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/templates/edit-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/src/main/resources/templates/reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/com/Spacenews/app/BlogCrController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/com/Spacenews/app/BlogCrModel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/com/Spacenews/app/BlogCrRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/com/Spacenews/app/BlogCrService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/com/Spacenews/app/BlogCrServiceApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/img/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/img/profile-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/aos/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/aos/aos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap-icons/bootstrap-icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap-icons/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/css/animations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/css/boxicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/css/boxicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/css/transformations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/fonts/boxicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/fonts/boxicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/fonts/boxicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/fonts/boxicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/boxicons/fonts/boxicons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/glightbox/css/glightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/glightbox/css/glightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/glightbox/js/glightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/glightbox/js/glightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/isotope-layout/isotope.pkgd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/isotope-layout/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/php-email-form/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/purecounter/purecounter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/swiper/swiper-bundle.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/swiper/swiper-bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/typed.js/typed.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/typed.js/typed.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/typed.js/typed.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/assets/vendor/waypoints/noframework.waypoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/forms/Readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/static/forms/contact.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/templates/articles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/templates/blog-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/templates/blogs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/templates/edit-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_cr_service/target/classes/templates/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/login_service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login_service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/login_service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+=======
     <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +219,17 @@
         <option value="Record" />
         <option value="AnnotationType" />
         <option value="Class" />
+        <option value="XML Properties File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -29,14 +239,19 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2gheeaptUcnZVD8Pdf9iagJyjzn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.ApiGatewayApplication.executor": "Run",
     "Application.ArticlesNewsApplication.executor": "Run",
+    "Application.BlogCrServiceApplication.executor": "Run",
     "Application.BlogsnewsApplication (1).executor": "Run",
     "Application.BlogsnewsApplication.executor": "Run",
     "Application.DiscoveryServiceApplication.executor": "Run",
@@ -48,18 +263,26 @@
     "Application.com.SpaceNews.articlesfeed.SpacenewsApplication.executor": "Run",
     "Application.com.SpaceNews.blogsfeed.BlogsnewsApplication.executor": "Run",
     "Application.run.executor": "Run",
+<<<<<<< HEAD
     "JUnit.SpaceflightNewsServiceDESCTest.executor": "Run",
     "JUnit.SpaceflightNewsServiceTest.executor": "Run",
+=======
+    "DefaultHtmlFileTemplate": "HTML File",
+>>>>>>> fabbde475c76e705b0eac649a93c4ce3699f1c5b
     "JUnit.com.SpaceNews.articlesfeed in feed_service.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.SpaceNews [install].executor": "Run",
     "Maven.SpaceNews [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "fatima",
     "jdk.selected.JAVA_MODULE": "19",
     "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
+    "last_opened_file_path": "C:/Users/User/SpaceNews/blog_cr_service/src/main/resources/templates",
+=======
     "last_opened_file_path": "C:/Users/hp/SpaceNews/articles_feed_service/src/main/resources/templates",
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -72,11 +295,19 @@
       <recent name="com.SpaceNews.articlesfeed" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
+      <recent name="C:\Users\User\SpaceNews\blog_cr_service\src\main\resources\templates" />
+      <recent name="C:\Users\User\SpaceNews\blog_cr_service\src\main\resources" />
+      <recent name="C:\Users\hp\spacenews" />
+      <recent name="C:\Users\hp\spacenews\Blogs_feed_service\src\main\resources" />
+      <recent name="C:\Users\hp\spacenews\articles_feed_service\src\main\resources" />
+=======
       <recent name="C:\Users\hp\SpaceNews\articles_feed_service\src\main\resources\templates" />
       <recent name="C:\Users\hp\SpaceNews\Discovery_service\src\main\resources" />
       <recent name="C:\Users\hp\SpaceNews\Discovery_service" />
       <recent name="C:\Users\hp\spacenews" />
       <recent name="C:\Users\hp\spacenews\Blogs_feed_service\src\main\resources" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hp\spacenews\eureka-server\src\main\resources" />
@@ -91,13 +322,47 @@
       <recent name="com.SpaceNews.blogsfeed" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.SpaceflightNewsServiceDESCTest">
+=======
+<<<<<<< HEAD
+  <component name="RunManager" selected="Application.BlogCrServiceApplication">
+=======
+  <component name="RunManager" selected="Application.BlogsnewsApplication">
+    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spacenews.ApiGateway.ApiGatewayApplication" />
+      <module name="ApiGateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spacenews.ApiGateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
+>>>>>>> fabbde475c76e705b0eac649a93c4ce3699f1c5b
     <configuration name="ArticlesNewsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.SpaceNews.articlesfeed.ArticlesNewsApplication" />
       <module name="articles_feed_service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.SpaceNews.articlesfeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogCrServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Spacenews.app.BlogCrServiceApplication" />
+      <module name="blog_cr_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Spacenews.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,19 +440,45 @@
       </method>
     </configuration>
     <list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <item itemvalue="Application.BlogCrServiceApplication" />
       <item itemvalue="Application.BlogsnewsApplication" />
       <item itemvalue="Application.LoginApplication" />
+      <item itemvalue="Application.EurekaServerApplication" />
+=======
+      <item itemvalue="Application.ApiGatewayApplication" />
+      <item itemvalue="Application.DiscoveryServiceApplication" />
+>>>>>>> fabbde475c76e705b0eac649a93c4ce3699f1c5b
+      <item itemvalue="Application.BlogsnewsApplication" />
+      <item itemvalue="Application.LoginApplication" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
       <item itemvalue="Application.ArticlesNewsApplication" />
       <item itemvalue="JUnit.SpaceflightNewsServiceDESCTest" />
       <item itemvalue="JUnit.SpaceflightNewsServiceTest" />
     </list>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="JUnit.SpaceflightNewsServiceDESCTest" />
         <item itemvalue="JUnit.SpaceflightNewsServiceTest" />
+=======
+        <item itemvalue="Application.BlogCrServiceApplication" />
+        <item itemvalue="Application.LoginApplication" />
+>>>>>>> fabbde475c76e705b0eac649a93c4ce3699f1c5b
         <item itemvalue="Application.BlogsnewsApplication" />
         <item itemvalue="Application.ArticlesNewsApplication" />
+<<<<<<< HEAD
+        <item itemvalue="Application.EurekaServerApplication" />
+=======
         <item itemvalue="Application.LoginApplication" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Application.ApiGatewayApplication" />
+        <item itemvalue="Application.DiscoveryServiceApplication" />
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
+>>>>>>> fabbde475c76e705b0eac649a93c4ce3699f1c5b
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +493,15 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="chatbot" />
+    <MESSAGE value="creation_blog_micro" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation_blog_micro" />
+  </component>
+=======
+>>>>>>> dda827621ca1745bfda6caca232d160a2200c7db
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <default-breakpoints>

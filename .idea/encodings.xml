@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/Discovery_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/articles_feed_service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/articles_feed_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog_cr_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/blog_cr_service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/login_service/src/main/java" charset="UTF-8" />

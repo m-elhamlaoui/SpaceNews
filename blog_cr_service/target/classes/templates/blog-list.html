@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Blogs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('https://i.postimg.cc/9MPkH4b9/28-Of-The-Most-Breathtaking-Astronomy-Photographs-Of-The-Year-2020-Have-Just-Been-Revealed.jpg'); /* Changez cette ligne pour le chemin de votre image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding: 20px;
+        }
+        h1 { color: white ;}
+        h2, h3 {
+            color: #005C96;
+        }
+        .blog-list {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .blog-form {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #007bff; /* Couleur bleue pour le bouton */
+            border-color: #007bff; /* Couleur de la bordure */
+            border-radius: 20px; /* Bordure arrondie */
+            padding: 10px 20px; /* Espacement du bouton */
+            font-size: 16px; /* Taille de la police */
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; /* Couleur bleue foncée au survol */
+            border-color: #0056b3; /* Couleur de la bordure au survol */
+        }
+        .blog-title {
+            color: #048B9A ;
+        }
+        #navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #343a40;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        #navbar ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+        #navbar li {
+            margin: 0 15px;
+        }
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #navbar a:hover {
+            color: #0056b3;
+        }
+        #header .profile h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<header id="header">
+    <div class="profile">
+        <h1 class="text-light"><a href="index.html">User</a></h1>
+    </div>
+    <nav id="navbar" class="nav-menu">
+        <ul>
+            <li><a href="/articles" class="nav-link scrollto"><span>Articles</span></a></li>
+            <li><a href="/blogs" class="nav-link scrollto"><span>Blogs</span></a></li>
+            <li><a href="/login" class="nav-link scrollto"><span>Logout</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h1 class="text-center">Blog Management</h1>
+    <div class="row">
+        <!-- Liste des Blogs -->
+        <div class="col-md-8">
+            <div class="blog-list">
+                <h2>Liste des Blogs</h2>
+                <ul class="list-unstyled">
+                    <li th:each="blog : ${blogs}" class="mb-3">
+                        <h3 th:text="${blog.title}" class="text-primary"></h3>
+                        <p th:text="${blog.content}"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Formulaire d'ajout de Blog -->
+        <div class="col-md-4">
+            <div class="blog-form">
+                <h2>Ajouter un Blog</h2>
+                <form th:action="@{/blogCr}" th:object="${newBlog}" method="post">
+                    <div class="form-group">
+                        <label for="title">Titre</label>
+                        <input type="text" id="title" th:field="*{title}" class="form-control" placeholder="Titre du blog" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Contenu</label>
+                        <textarea id="content" th:field="*{content}" class="form-control" rows="5" placeholder="Contenu du blog" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script
+        src="https://cdn.cai.tools.sap/webchat/webchat.js"
+        channelId="605282f1-a553-4d95-ba1b-40feb4470b4a"
+        token="8c49f65d6b986e2f79d196a3bfb28ce4"
+        id="cai-webchat">
+</script>
+</body>
+</html>

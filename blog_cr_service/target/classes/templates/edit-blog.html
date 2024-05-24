@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier le Blog</title>
+</head>
+<body>
+<h1>Modifier le Blog</h1>
+<form th:action="@{/blogCr/{id}(id=${blog.id})}" th:object="${blog}" method="post">
+    <label for="title">Titre:</label><br>
+    <input type="text" id="title" name="title" th:value="*{title}" required><br>
+    <label for="content">Contenu:</label><br>
+    <textarea id="content" name="content" th:text="*{content}" required></textarea><br>
+
+</form>
+</body>
+</html>
