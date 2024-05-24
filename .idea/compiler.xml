@@ -30,6 +30,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateway" options="-parameters" />
       <module name="Blogs_feed_service" options="-parameters" />
       <module name="Discovery_service" options="-parameters" />
       <module name="Login_service" options="-parameters" />
