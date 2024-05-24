@@ -48,6 +48,7 @@
     "Application.com.SpaceNews.articlesfeed.SpacenewsApplication.executor": "Run",
     "Application.com.SpaceNews.blogsfeed.BlogsnewsApplication.executor": "Run",
     "Application.run.executor": "Run",
+    "JUnit.SpaceflightNewsServiceTest.executor": "Run",
     "JUnit.com.SpaceNews.articlesfeed in feed_service.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Maven.SpaceNews [install].executor": "Run",
@@ -89,20 +90,7 @@
       <recent name="com.SpaceNews.blogsfeed" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BlogsnewsApplication">
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.spacenews.ApiGateway.ApiGatewayApplication" />
-      <module name="ApiGateway" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spacenews.ApiGateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SpaceflightNewsServiceDESCTest">
     <configuration name="ArticlesNewsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.SpaceNews.articlesfeed.ArticlesNewsApplication" />
       <module name="articles_feed_service" />
@@ -129,19 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DiscoveryServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.spacenews.DiscoveryService.DiscoveryServiceApplication" />
-      <module name="Discovery_service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.spacenews.DiscoveryService.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoginApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.spacenews.Login.LoginApplication" />
       <module name="Login_service" />
@@ -151,6 +126,36 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpaceflightNewsServiceDESCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="articles_feed_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.SpaceNews.articlesfeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.SpaceNews.articlesfeed" />
+      <option name="MAIN_CLASS_NAME" value="com.SpaceNews.articlesfeed.SpaceflightNewsServiceDESCTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpaceflightNewsServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="articles_feed_service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.SpaceNews.articlesfeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.SpaceNews.articlesfeed" />
+      <option name="MAIN_CLASS_NAME" value="com.SpaceNews.articlesfeed.SpaceflightNewsServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -169,19 +174,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ApiGatewayApplication" />
-      <item itemvalue="Application.DiscoveryServiceApplication" />
       <item itemvalue="Application.BlogsnewsApplication" />
       <item itemvalue="Application.LoginApplication" />
       <item itemvalue="Application.ArticlesNewsApplication" />
+      <item itemvalue="JUnit.SpaceflightNewsServiceDESCTest" />
+      <item itemvalue="JUnit.SpaceflightNewsServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SpaceflightNewsServiceDESCTest" />
+        <item itemvalue="JUnit.SpaceflightNewsServiceTest" />
         <item itemvalue="Application.BlogsnewsApplication" />
         <item itemvalue="Application.ArticlesNewsApplication" />
         <item itemvalue="Application.LoginApplication" />
-        <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.DiscoveryServiceApplication" />
       </list>
     </recent_temporary>
   </component>
