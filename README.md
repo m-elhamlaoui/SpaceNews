@@ -41,7 +41,7 @@ Sequence Diagram
 
 The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
 
-![Architecture Diagram](./documents/architecture.jpeg)
+![Architecture Diagram](./documents/architecture.jpg)
 
 ## Microservices
 

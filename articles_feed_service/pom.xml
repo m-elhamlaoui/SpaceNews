@@ -97,6 +97,9 @@
                             <to>
                                 <image>registry.hub.docker.com/basmafj/articles_feed_service</image>
                             </to>
+                            <container>
+                                <mainClass>com.SpaceNews.articlesfeed.ArticlesNewsApplication</mainClass>
+                            </container>
                         </configuration>
                     </plugin>
         </plugins>

@@ -62,7 +62,7 @@ services:
       - apigateway
 
   ## login_Service Docker Compose Config
-  login-service:
+  login_service:
     container_name: login_service
     image: basmafj/login_service:latest
     environment:
