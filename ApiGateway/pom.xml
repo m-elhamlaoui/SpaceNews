@@ -7,7 +7,7 @@
         <version>3.1.1</version>
         <relativePath />
     </parent>
-    <artifactId>ApiGateway</artifactId>
+    <artifactId>apigateway</artifactId>
     <name>Archetype - ApiGateway</name>
     <url>http://maven.apache.org</url>
     <properties>
@@ -59,7 +59,7 @@
                         <image>eclipse-temurin:17-jre</image>
                     </from>
                     <to>
-                        <image>registry.hub.docker.com/basmafj/ApiGateway</image>
+                        <image>registry.hub.docker.com/basmafj/apigateway</image>
                     </to>
                 </configuration>
             </plugin>

@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.Spacenews</groupId>
-    <artifactId>Login_service</artifactId>
+    <artifactId>login_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Archetype - Login_service</name>
     <url>http://maven.apache.org</url>
@@ -111,7 +111,7 @@
                         <image>eclipse-temurin:17-jre</image>
                     </from>
                     <to>
-                        <image>registry.hub.docker.com/basmafj/Login_service</image>
+                        <image>registry.hub.docker.com/basmafj/login_service</image>
                     </to>
                 </configuration>
             </plugin>
