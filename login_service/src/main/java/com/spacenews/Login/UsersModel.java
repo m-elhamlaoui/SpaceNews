@@ -1,4 +1,4 @@
-package com.spacenews.Login;
+package com.SpaceNews.Login;
 
 import jakarta.persistence.*;
 

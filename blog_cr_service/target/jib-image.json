@@ -1,1 +1,1 @@
-{"image":"registry.hub.docker.com/basmafj/blog_cr_service","imageId":"sha256:7fed86a5a9e496bdb2b291dc04baffa15ec8f19b21e9782aa450a2f596eba2d3","imageDigest":"sha256:8ad224ed4aba5037d137defe98e414f5798afcf9ff613cfce402fe9b32bb5a0c","tags":["latest"],"imagePushed":true}
+{"image":"registry.hub.docker.com/basmafj/blog_cr_service","imageId":"sha256:0e42f043a8b2712819f581545f17fc931be70b70692d61711a1f5b02fd61ae6c","imageDigest":"sha256:9259355c7bab13c40f9233b3ebb7f63f1c80924e76a9793cba2de031c31afdaa","tags":["latest"],"imagePushed":true}

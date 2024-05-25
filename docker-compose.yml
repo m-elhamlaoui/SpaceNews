@@ -1,0 +1,90 @@
+version: '3.7'
+services:
+  ## postgresql Docker Compose Config
+  postgres-db:
+    container_name: postgres-db
+    image: postgres
+    environment:
+      POSTGRES_DB: ProjetJEE
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: basma
+      PGDATA: /data/postgres
+    volumes:
+      - ./postgres-data:/data/postgres
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    restart: always
+
+  ## Eureka Server
+  discovery-server:
+    image: basmafj/discovery-service:latest
+    container_name: discovery-server
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - postgres-db
+
+  apigateway:
+    image: basmafj/apigateway:latest
+    container_name: apigateway
+    ports:
+      - "9000:9000"
+    expose:
+      - "9000"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY= TRACE
+    depends_on:
+      - discovery-server
+
+  ## article_feed_Service Docker Compose Config
+  article_feed_Service:
+    container_name: article_feed_service
+    image: basmafj/articles_feed_service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - discovery-server
+      - apigateway
+
+  ## blog_feed_service Docker Compose Config
+  blog_feed_service:
+    container_name: blog_feed_service
+    image: basmafj/blogs_feed_service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - discovery-server
+      - apigateway
+
+  ## login_Service Docker Compose Config
+  login-service:
+    container_name: login_service
+    image: basmafj/login_service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/ProjetJEE
+    depends_on:
+      - postgres-db
+      - discovery-server
+      - apigateway
+
+  ## blog_cr_service Docker Compose Config
+  blog_cr_service:
+    container_name: blog_cr_service
+    image: basmafj/blog_cr_service:latest
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/ProjetJEE
+    depends_on:
+      - postgres-db
+      - discovery-server
+      - apigateway
+
+networks:
+  default:
+    driver: bridge

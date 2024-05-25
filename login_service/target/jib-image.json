@@ -1,1 +1,1 @@
-{"image":"registry.hub.docker.com/basmafj/login_service","imageId":"sha256:a551780043371367e1473ec0ec65230b9d879946426545aee9e6d24a9d480d71","imageDigest":"sha256:f4cc99b00254c2004385276138e3b35fd295989c5e341fb8e0895d9a23df5ad1","tags":["latest"],"imagePushed":true}
+{"image":"registry.hub.docker.com/basmafj/login_service","imageId":"sha256:7301b5eab4592680b9b2b707ad663671397de0e1ddcf0d3d044b2c48c89c6305","imageDigest":"sha256:a5a56b57d3475aa70305030e9f415f5a7415a00fb4a2d847f9a92a9d1726872c","tags":["latest"],"imagePushed":true}

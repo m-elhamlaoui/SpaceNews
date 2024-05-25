@@ -1,4 +1,4 @@
-package com.spacenews.Login;
+package com.SpaceNews.Login;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

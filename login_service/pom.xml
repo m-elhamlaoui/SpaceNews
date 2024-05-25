@@ -81,22 +81,6 @@
 
     <build>
         <plugins>
-            <!-- Maven JAR Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.SpaceNews.Login.LoginApplication</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -113,6 +97,9 @@
                     <to>
                         <image>registry.hub.docker.com/basmafj/login_service</image>
                     </to>
+                    <container>
+                        <mainClass>com.SpaceNews.Login.LoginApplication</mainClass>
+                    </container>
                 </configuration>
             </plugin>
         </plugins>
