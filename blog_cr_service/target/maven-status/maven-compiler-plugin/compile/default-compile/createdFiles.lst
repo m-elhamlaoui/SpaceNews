@@ -1,0 +1,5 @@
+com\Spacenews\app\BlogCrModel.class
+com\Spacenews\app\BlogCrRepository.class
+com\Spacenews\app\BlogCrService.class
+com\Spacenews\app\BlogCrController.class
+com\Spacenews\app\BlogCrServiceApplication.class

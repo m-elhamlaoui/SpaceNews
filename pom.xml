@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -16,8 +15,8 @@
     <module>Blogs_feed_service</module>
     <module>reports_feed_service</module>
     <module>login_service</module>
-      <module>blog_cr_service</module>
-      <module>ApiGateway</module>
+    <module>blog_cr_service</module>
+    <module>ApiGateway</module>
     <module>Discovery_service</module>
   </modules>
 
@@ -26,7 +25,7 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <spring.boot.version>2.5.7</spring.boot.version>
-    <spring.cloud.version>2023.0.1</spring.cloud.version> <!-- Version de Spring Cloud mise à jour -->
+    <spring.cloud.version>2023.0.1</spring.cloud.version>
   </properties>
 
   <dependencyManagement>
@@ -41,7 +40,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring.cloud.version}</version> <!-- Utilisation de la version spécifiée -->
+        <version>${spring.cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -62,7 +61,6 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-gateway</artifactId>
-      <!-- Utilisation de la version gérée par Spring Cloud -->
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -79,7 +77,26 @@
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring.boot.version}</version>
         </plugin>
+        <plugin>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>3.2.1</version>
+          <configuration>
+            <from>
+              <image>eclipse-temurin:17-jre</image>
+            </from>
+            <to>
+              <image>registry.hub.docker.com/basmafj/${project.artifactId}</image>
+            </to>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>com.google.cloud.tools</groupId>
+        <artifactId>jib-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 </project>
