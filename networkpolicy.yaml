@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-traffic-from-same-network
+  namespace: default
+  labels:
+    io.kompose.network: "true"
+spec:
+  podSelector:
+    matchLabels:
+      io.kompose.network: "true"
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              io.kompose.network: "true"
