@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - your-branch-name  # Remplacez par la branche que vous voulez utiliser
 
 jobs:
   build:
@@ -17,16 +18,16 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'adopt'  # Ajout de la distribution JDK
 
-      - name: Build articles_feed_service
+      - name: Build and install articles_feed_service
         run: |
-          cd path/to/articles_feed_service
+          cd articles_feed_service  # Chemin correct vers le projet articles_feed_service
           mvn clean install
 
       - name: Build blogs_feed_service
         run: |
-          cd path/to/blogs_feed_service
+          cd blogs_feed_service  # Chemin correct vers le projet blogs_feed_service
           mvn clean package
 
       - name: Log in to Docker Hub
