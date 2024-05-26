@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
+          distribution: 'adopt'  # Ajoutez cette ligne pour spécifier la distribution
 
       - name: Build with Maven
         run: mvn clean package
@@ -58,4 +59,11 @@ jobs:
           KUBECONFIG: ${{ secrets.MINIKUBE_KUBECONFIG }}
         run: |
           echo "$KUBECONFIG" | base64 --decode > $HOME/.kube/config
-          kubectl apply -f k8s/
+          kubectl apply -f k8s/apigateway-deployment.yaml
+          kubectl apply -f k8s/discovery-server-deployment.yaml
+          kubectl apply -f k8s/login-service-deployment.yaml
+          kubectl apply -f k8s/articles-feed-service-deployment.yaml
+          kubectl apply -f k8s/blog-cr-service-deployment.yaml
+          kubectl apply -f k8s/blog-feed-service-deployment.yaml
+          kubectl apply -f k8s/postgres-db-deployment.yaml
+          kubectl apply -f k8s/postgres-db-claim0-persistentvolumeclaim.yaml
