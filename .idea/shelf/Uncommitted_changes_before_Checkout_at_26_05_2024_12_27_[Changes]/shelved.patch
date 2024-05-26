@@ -1,0 +1,351 @@
+Index: Blogs_feed_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.1.1</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n    <groupId>com.Spacenews</groupId>\r\n    <artifactId>blogs_feed_service</artifactId>\r\n    <version>0.0.1-SNAPSHOT</version>\r\n    <name>Archetype - Blogs_feed_service</name>\r\n    <url>http://maven.apache.org</url>\r\n\r\n    <properties>\r\n        <java.version>17</java.version>\r\n        <spring-cloud.version>2022.0.3</spring-cloud.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <!-- Spring Boot Dependencies -->\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n        </dependency>\r\n\r\n        <!-- Spring Cloud Dependencies -->\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n        </dependency>\r\n\r\n        <!-- Additional Dependencies -->\r\n        <dependency>\r\n            <groupId>org.springframework</groupId>\r\n            <artifactId>spring-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>com.fasterxml.jackson.core</groupId>\r\n            <artifactId>jackson-annotations</artifactId>\r\n        </dependency>\r\n\r\n        <!-- Project Dependencies -->\r\n        <dependency>\r\n            <groupId>com.Spacenews</groupId>\r\n            <artifactId>articles_feed_service</artifactId>\r\n            <version>1.0-SNAPSHOT</version>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>${spring-cloud.version}</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-jar-plugin</artifactId>\r\n                <version>3.2.0</version>\r\n                <configuration>\r\n                    <archive>\r\n                        <manifest>\r\n                            <addClasspath>true</addClasspath>\r\n                            <classpathPrefix>lib/</classpathPrefix>\r\n                            <mainClass>com.SpaceNews.blogsfeed.BlogsnewsApplication</mainClass>\r\n                        </manifest>\r\n                    </archive>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>com.google.cloud.tools</groupId>\r\n                <artifactId>jib-maven-plugin</artifactId>\r\n                <version>3.4.2</version>\r\n                <configuration>\r\n                    <from>\r\n                        <image>eclipse-temurin:17-jre</image>\r\n                    </from>\r\n                    <to>\r\n                        <image>registry.hub.docker.com/basmafj/blogs_feed_service</image>\r\n                    </to>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Blogs_feed_service/pom.xml b/Blogs_feed_service/pom.xml
+--- a/Blogs_feed_service/pom.xml	
++++ b/Blogs_feed_service/pom.xml	
+@@ -92,7 +92,7 @@
+                         <image>eclipse-temurin:17-jre</image>
+                     </from>
+                     <to>
+-                        <image>registry.hub.docker.com/basmafj/blogs_feed_service</image>
++                        <image>registry.hub.docker.com/fatimamlk/blogs_feed_service</image>
+                     </to>
+                 </configuration>
+             </plugin>
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/modules.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/ApiGateway/ApiGateway.iml" filepath="$PROJECT_DIR$/ApiGateway/ApiGateway.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: articles_feed_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.1.1</version>\r\n        <relativePath />\r\n    </parent>\r\n    <groupId>com.Spacenews</groupId>\r\n    <artifactId>articles_feed_service</artifactId>\r\n    <name>Archetype - feed_service</name>\r\n    <url>http://maven.apache.org</url>\r\n\r\n\r\n    <properties>\r\n        <java.version>17</java.version>\r\n        <spring-cloud.version>2022.0.3</spring-cloud.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.mockito</groupId>\r\n            <artifactId>mockito-core</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n        </dependency>\r\n\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.junit.jupiter</groupId>\r\n            <artifactId>junit-jupiter-api</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.mockito</groupId>\r\n            <artifactId>mockito-core</artifactId>\r\n        </dependency>\r\n\r\n    </dependencies>\r\n\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>${spring-cloud.version}</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.apache.maven.plugins</groupId>\r\n                <artifactId>maven-jar-plugin</artifactId>\r\n                <version>3.2.0</version>\r\n                <configuration>\r\n                    <archive>\r\n                        <manifest>\r\n                            <addClasspath>true</addClasspath>\r\n                            <classpathPrefix>lib/</classpathPrefix>\r\n                            <mainClass>com.SpaceNews.articlesfeed.ArticlesNewsApplication</mainClass>\r\n                        </manifest>\r\n                    </archive>\r\n                </configuration>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n\r\n                    <plugin>\r\n                        <groupId>com.google.cloud.tools</groupId>\r\n                        <artifactId>jib-maven-plugin</artifactId>\r\n                        <version>3.4.2</version>\r\n                        <configuration>\r\n                            <from>\r\n                                <image>eclipse-temurin:17-jre</image>\r\n                            </from>\r\n                            <to>\r\n                                <image>registry.hub.docker.com/basmafj/articles_feed_service</image>\r\n                            </to>\r\n                            <container>\r\n                                <mainClass>com.SpaceNews.articlesfeed.ArticlesNewsApplication</mainClass>\r\n                            </container>\r\n                        </configuration>\r\n                    </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/articles_feed_service/pom.xml b/articles_feed_service/pom.xml
+--- a/articles_feed_service/pom.xml	
++++ b/articles_feed_service/pom.xml	
+@@ -95,7 +95,7 @@
+                                 <image>eclipse-temurin:17-jre</image>
+                             </from>
+                             <to>
+-                                <image>registry.hub.docker.com/basmafj/articles_feed_service</image>
++                                <image>registry.hub.docker.com/fatimamlk/articles_feed_service</image>
+                             </to>
+                             <container>
+                                 <mainClass>com.SpaceNews.articlesfeed.ArticlesNewsApplication</mainClass>
+Index: reports_feed_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>com.Spacenews.app</groupId>\r\n        <artifactId>SpaceNews</artifactId>\r\n        <version>1.0-SNAPSHOT</version>\r\n    </parent>\r\n    <artifactId>reports_feed_service</artifactId>\r\n    <name>Reports Feed Service</name>\r\n    <url>http://maven.apache.org</url>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-logging</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>com.fasterxml.jackson.core</groupId>\r\n            <artifactId>jackson-annotations</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.slf4j</groupId>\r\n            <artifactId>slf4j-api</artifactId>\r\n            <version>1.7.32</version>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>ch.qos.logback</groupId>\r\n            <artifactId>logback-classic</artifactId>\r\n            <version>1.2.7</version>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>com.google.cloud.tools</groupId>\r\n                <artifactId>jib-maven-plugin</artifactId>\r\n                <version>3.4.2</version>\r\n                <configuration>\r\n                    <from>\r\n                        <image>eclipse-temurin:17-jre</image>\r\n                    </from>\r\n                    <to>\r\n                        <image>registry.hub.docker.com/basmafj/reports_feed_service</image>\r\n                    </to>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/reports_feed_service/pom.xml b/reports_feed_service/pom.xml
+--- a/reports_feed_service/pom.xml	
++++ b/reports_feed_service/pom.xml	
+@@ -54,7 +54,7 @@
+                         <image>eclipse-temurin:17-jre</image>
+                     </from>
+                     <to>
+-                        <image>registry.hub.docker.com/basmafj/reports_feed_service</image>
++                        <image>registry.hub.docker.com/fatimamlk/reports_feed_service</image>
+                     </to>
+                 </configuration>
+             </plugin>
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"file://$PROJECT_DIR$/ApiGateway/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Blogs_feed_service/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/Discovery_service/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/articles_feed_service/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/blog_cr_service/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/login_service/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/reports_feed_service/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/reports_feed_service/src/main/resources\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/java\" charset=\"UTF-8\" />\r\n    <file url=\"file://$PROJECT_DIR$/src/main/resources\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/encodings.xml b/.idea/encodings.xml
+--- a/.idea/encodings.xml	
++++ b/.idea/encodings.xml	
+@@ -4,6 +4,8 @@
+     <file url="file://$PROJECT_DIR$/ApiGateway/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Blogs_feed_service/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/Discovery_service/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/K8s/src/main/java" charset="UTF-8" />
++    <file url="file://$PROJECT_DIR$/K8s/src/main/resources" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/articles_feed_service/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/blog_cr_service/src/main/java" charset="UTF-8" />
+     <file url="file://$PROJECT_DIR$/login_service/src/main/java" charset="UTF-8" />
+Index: settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/settings.xml b/settings.xml
+new file mode 100644
+--- /dev/null	
++++ b/settings.xml	
+@@ -0,0 +1,16 @@
++<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
++          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
++
++    <pluginGroups>
++        <pluginGroup>com.google.cloud.tools</pluginGroup>
++    </pluginGroups>
++
++    <servers>
++        <server>
++            <id>registry.hub.docker.com</id>
++            <username>fatimamlk</username>
++            <password>Fatima@2002</password>
++        </server>
++    </servers>
++</settings>
+\ No newline at end of file
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n  <modelVersion>4.0.0</modelVersion>\r\n\r\n  <groupId>com.Spacenews.app</groupId>\r\n  <artifactId>SpaceNews</artifactId>\r\n  <version>1.0-SNAPSHOT</version>\r\n  <packaging>pom</packaging>\r\n\r\n  <name>SpaceNews</name>\r\n  <url>https://www.SpaceNews.com</url>\r\n\r\n  <modules>\r\n    <module>articles_feed_service</module>\r\n    <module>Blogs_feed_service</module>\r\n    <module>reports_feed_service</module>\r\n    <module>login_service</module>\r\n    <module>blog_cr_service</module>\r\n    <module>ApiGateway</module>\r\n    <module>Discovery_service</module>\r\n  </modules>\r\n\r\n  <properties>\r\n    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n    <maven.compiler.source>17</maven.compiler.source>\r\n    <maven.compiler.target>17</maven.compiler.target>\r\n    <spring.boot.version>2.5.7</spring.boot.version>\r\n    <spring.cloud.version>2023.0.1</spring.cloud.version>\r\n  </properties>\r\n\r\n  <dependencyManagement>\r\n    <dependencies>\r\n      <dependency>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-dependencies</artifactId>\r\n        <version>${spring.boot.version}</version>\r\n        <type>pom</type>\r\n        <scope>import</scope>\r\n      </dependency>\r\n      <dependency>\r\n        <groupId>org.springframework.cloud</groupId>\r\n        <artifactId>spring-cloud-dependencies</artifactId>\r\n        <version>${spring.cloud.version}</version>\r\n        <type>pom</type>\r\n        <scope>import</scope>\r\n      </dependency>\r\n    </dependencies>\r\n  </dependencyManagement>\r\n\r\n  <dependencies>\r\n    <dependency>\r\n      <groupId>org.projectlombok</groupId>\r\n      <artifactId>lombok</artifactId>\r\n      <version>1.18.20</version>\r\n      <scope>provided</scope>\r\n    </dependency>\r\n    <dependency>\r\n      <groupId>org.springframework.boot</groupId>\r\n      <artifactId>spring-boot-starter-actuator</artifactId>\r\n    </dependency>\r\n    <dependency>\r\n      <groupId>org.springframework.cloud</groupId>\r\n      <artifactId>spring-cloud-starter-gateway</artifactId>\r\n    </dependency>\r\n    <dependency>\r\n      <groupId>org.springframework.boot</groupId>\r\n      <artifactId>spring-boot-starter-test</artifactId>\r\n      <scope>test</scope>\r\n    </dependency>\r\n  </dependencies>\r\n\r\n  <build>\r\n    <pluginManagement>\r\n      <plugins>\r\n        <plugin>\r\n          <groupId>org.springframework.boot</groupId>\r\n          <artifactId>spring-boot-maven-plugin</artifactId>\r\n          <version>${spring.boot.version}</version>\r\n        </plugin>\r\n        <plugin>\r\n          <groupId>com.google.cloud.tools</groupId>\r\n          <artifactId>jib-maven-plugin</artifactId>\r\n          <version>3.2.1</version>\r\n          <configuration>\r\n            <from>\r\n              <image>eclipse-temurin:17-jre</image>\r\n            </from>\r\n            <to>\r\n              <image>registry.hub.docker.com/basmafj/${project.artifactId}</image>\r\n            </to>\r\n          </configuration>\r\n        </plugin>\r\n      </plugins>\r\n    </pluginManagement>\r\n    <plugins>\r\n      <plugin>\r\n        <groupId>com.google.cloud.tools</groupId>\r\n        <artifactId>jib-maven-plugin</artifactId>\r\n      </plugin>\r\n    </plugins>\r\n  </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	
++++ b/pom.xml	
+@@ -18,6 +18,7 @@
+     <module>blog_cr_service</module>
+     <module>ApiGateway</module>
+     <module>Discovery_service</module>
++      <module>K8s</module>
+   </modules>
+ 
+   <properties>
+@@ -86,7 +87,7 @@
+               <image>eclipse-temurin:17-jre</image>
+             </from>
+             <to>
+-              <image>registry.hub.docker.com/basmafj/${project.artifactId}</image>
++              <image>registry.hub.docker.com/fatimamlk/${project.artifactId}</image>
+             </to>
+           </configuration>
+         </plugin>
+Index: Discovery_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.0.0</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n    <groupId>com.spacenews</groupId>\r\n    <artifactId>discovery-service</artifactId>\r\n    <version>0.0.1-SNAPSHOT</version>\r\n    <name>Discovery Service</name>\r\n    <description>Spring Cloud Eureka Discovery Service</description>\r\n    <properties>\r\n        <java.version>17</java.version>\r\n    </properties>\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>2022.0.0</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>\r\n        </dependency>\r\n    </dependencies>\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>com.google.cloud.tools</groupId>\r\n                <artifactId>jib-maven-plugin</artifactId>\r\n                <version>3.4.2</version>\r\n                <configuration>\r\n                    <from>\r\n                        <image>eclipse-temurin:17-jre</image>\r\n                    </from>\r\n                    <to>\r\n                        <image>registry.hub.docker.com/basmafj/discovery-service</image>\r\n                    </to>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Discovery_service/pom.xml b/Discovery_service/pom.xml
+--- a/Discovery_service/pom.xml	
++++ b/Discovery_service/pom.xml	
+@@ -52,7 +52,7 @@
+                         <image>eclipse-temurin:17-jre</image>
+                     </from>
+                     <to>
+-                        <image>registry.hub.docker.com/basmafj/discovery-service</image>
++                        <image>registry.hub.docker.com/fatimamlk/discovery-service</image>
+                     </to>
+                 </configuration>
+             </plugin>
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <excludeFromCompile>\r\n      <directory url=\"file://$PROJECT_DIR$/ApiGateway/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n      <directory url=\"file://$PROJECT_DIR$/Blogs_feed_service/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n      <directory url=\"file://$PROJECT_DIR$/Discovery_service/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n      <directory url=\"file://$PROJECT_DIR$/articles_feed_service/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n      <directory url=\"file://$PROJECT_DIR$/login_service/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n      <directory url=\"file://$PROJECT_DIR$/reports_feed_service/src/main/resources/archetype-resources\" includeSubdirectories=\"true\" />\r\n    </excludeFromCompile>\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"articles_feed_service\" />\r\n        <module name=\"Login_service\" />\r\n        <module name=\"reports_feed_service\" />\r\n        <module name=\"blogs_feed_service\" />\r\n        <module name=\"blog_cr_service\" />\r\n        <module name=\"ApiGateway\" />\r\n        <module name=\"discovery-service\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n  <component name=\"JavacSettings\">\r\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\r\n      <module name=\"ApiGateway\" options=\"-parameters\" />\r\n      <module name=\"Login_service\" options=\"-parameters\" />\r\n      <module name=\"articles_feed_service\" options=\"-parameters\" />\r\n      <module name=\"blog_cr_service\" options=\"-parameters\" />\r\n      <module name=\"blogs_feed_service\" options=\"-parameters\" />\r\n      <module name=\"discovery-service\" options=\"-parameters\" />\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	
++++ b/.idea/compiler.xml	
+@@ -14,20 +14,27 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
++        <module name="apigateway" />
+         <module name="articles_feed_service" />
+         <module name="Login_service" />
+         <module name="reports_feed_service" />
+         <module name="blogs_feed_service" />
+         <module name="blog_cr_service" />
++        <module name="Blogs_feed_service" />
+         <module name="ApiGateway" />
+         <module name="discovery-service" />
+       </profile>
+     </annotationProcessing>
++    <bytecodeTargetLevel>
++      <module name="K8s" target="19" />
++    </bytecodeTargetLevel>
+   </component>
+   <component name="JavacSettings">
+     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+       <module name="ApiGateway" options="-parameters" />
++      <module name="Blogs_feed_service" options="-parameters" />
+       <module name="Login_service" options="-parameters" />
++      <module name="apigateway" options="-parameters" />
+       <module name="articles_feed_service" options="-parameters" />
+       <module name="blog_cr_service" options="-parameters" />
+       <module name="blogs_feed_service" options="-parameters" />
+Index: login_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.1.1</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n\r\n    <groupId>com.SpaceNews</groupId>\r\n    <artifactId>login_service</artifactId>\r\n    <name>Archetype - Login_service</name>\r\n    <url>http://maven.apache.org</url>\r\n\r\n    <properties>\r\n        <java.version>17</java.version>\r\n        <spring-cloud.version>2022.0.3</spring-cloud.version>\r\n    </properties>\r\n\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-data-jpa</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.postgresql</groupId>\r\n            <artifactId>postgresql</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.apache.tomcat.embed</groupId>\r\n            <artifactId>tomcat-embed-core</artifactId>\r\n        </dependency>\r\n    </dependencies>\r\n\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>${spring-cloud.version}</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>com.google.cloud.tools</groupId>\r\n                <artifactId>jib-maven-plugin</artifactId>\r\n                <version>3.4.2</version>\r\n                <configuration>\r\n                    <from>\r\n                        <image>eclipse-temurin:17-jre</image>\r\n                    </from>\r\n                    <to>\r\n                        <image>registry.hub.docker.com/basmafj/login_service</image>\r\n                    </to>\r\n                    <container>\r\n                        <mainClass>com.SpaceNews.Login.LoginApplication</mainClass>\r\n                    </container>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/login_service/pom.xml b/login_service/pom.xml
+--- a/login_service/pom.xml	
++++ b/login_service/pom.xml	
+@@ -79,7 +79,7 @@
+                         <image>eclipse-temurin:17-jre</image>
+                     </from>
+                     <to>
+-                        <image>registry.hub.docker.com/basmafj/login_service</image>
++                        <image>registry.hub.docker.com/fatimamlk/login_service</image>
+                     </to>
+                     <container>
+                         <mainClass>com.SpaceNews.Login.LoginApplication</mainClass>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -7,6 +7,11 @@
+         <option value="$PROJECT_DIR$/pom.xml" />
+       </list>
+     </option>
++    <option name="ignoredFiles">
++      <set>
++        <option value="$PROJECT_DIR$/K8s/pom.xml" />
++      </set>
++    </option>
+   </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file
+Index: blog_cr_service/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.1.1</version>\r\n        <relativePath/> <!-- lookup parent from repository -->\r\n    </parent>\r\n    <groupId>com.Spacenews.app</groupId>\r\n    <artifactId>blog_cr_service</artifactId>\r\n    <name>Archetype - blog_cr_service</name>\r\n    <url>http://maven.apache.org</url>\r\n    <version>1.0-SNAPSHOT</version>\r\n\r\n    <properties>\r\n        <java.version>17</java.version>\r\n        <spring-cloud.version>2022.0.3</spring-cloud.version>\r\n    </properties>\r\n    <dependencies>\r\n        <!-- Spring Boot Starter Data JPA -->\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-data-jpa</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n        </dependency>\r\n\r\n\r\n        <!-- PostgreSQL JDBC Driver -->\r\n        <dependency>\r\n            <groupId>org.postgresql</groupId>\r\n            <artifactId>postgresql</artifactId>\r\n        </dependency>\r\n\r\n        <!-- Thymeleaf -->\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-thymeleaf</artifactId>\r\n        </dependency>\r\n\r\n        <!-- Spring Boot Starter Web -->\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-web</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n        </dependency>\r\n\r\n        <!-- Spring Boot Starter Test -->\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-test</artifactId>\r\n            <scope>test</scope>\r\n        </dependency>\r\n    </dependencies>\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <!-- Import Spring Cloud dependencies -->\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>${spring-cloud.version}</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>com.google.cloud.tools</groupId>\r\n                <artifactId>jib-maven-plugin</artifactId>\r\n                <version>3.4.2</version>\r\n                <configuration>\r\n                    <from>\r\n                        <image>eclipse-temurin:17-jre</image>\r\n                    </from>\r\n                    <to>\r\n                        <image>registry.hub.docker.com/basmafj/blog_cr_service</image>\r\n                    </to>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/blog_cr_service/pom.xml b/blog_cr_service/pom.xml
+--- a/blog_cr_service/pom.xml	
++++ b/blog_cr_service/pom.xml	
+@@ -85,7 +85,7 @@
+                         <image>eclipse-temurin:17-jre</image>
+                     </from>
+                     <to>
+-                        <image>registry.hub.docker.com/basmafj/blog_cr_service</image>
++                        <image>registry.hub.docker.com/fatimamlk/blog_cr_service</image>
+                     </to>
+                 </configuration>
+             </plugin>
+Index: ApiGateway/target/jib-image.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\"image\":\"registry.hub.docker.com/basmafj/apigateway\",\"imageId\":\"sha256:d03cd92e21eb2d3127c34806312cb50f36e36f5bed6fb05a6e836077462ef57e\",\"imageDigest\":\"sha256:b2d17aad00061d95c05016baecc3eac1cb408254b9c9ff85b1be4e78444ab76f\",\"tags\":[\"latest\"],\"imagePushed\":true}
+===================================================================
+diff --git a/ApiGateway/target/jib-image.json b/ApiGateway/target/jib-image.json
+--- a/ApiGateway/target/jib-image.json	
++++ b/ApiGateway/target/jib-image.json	
+@@ -1,1 +1,1 @@
+-{"image":"registry.hub.docker.com/basmafj/apigateway","imageId":"sha256:d03cd92e21eb2d3127c34806312cb50f36e36f5bed6fb05a6e836077462ef57e","imageDigest":"sha256:b2d17aad00061d95c05016baecc3eac1cb408254b9c9ff85b1be4e78444ab76f","tags":["latest"],"imagePushed":true}
+\ No newline at end of file
++{"image":"registry.hub.docker.com/fatimamlk/apigateway","imageId":"sha256:d03cd92e21eb2d3127c34806312cb50f36e36f5bed6fb05a6e836077462ef57e","imageDigest":"sha256:b2d17aad00061d95c05016baecc3eac1cb408254b9c9ff85b1be4e78444ab76f","tags":["latest"],"imagePushed":true}
+\ No newline at end of file
+Index: docker-compose.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>version: '3.7'\r\nservices:\r\n  ## postgresql Docker Compose Config\r\n  postgres-db:\r\n    container_name: postgres-db\r\n    image: postgres\r\n    environment:\r\n      POSTGRES_DB: ProjetJEE\r\n      POSTGRES_USER: postgres\r\n      POSTGRES_PASSWORD: basma\r\n      PGDATA: /data/postgres\r\n    volumes:\r\n      - ./postgres-data:/data/postgres\r\n    expose:\r\n      - \"5432\"\r\n    ports:\r\n      - \"5432:5432\"\r\n    restart: always\r\n\r\n  ## Eureka Server\r\n  discovery-server:\r\n    image: basmafj/discovery-service:latest\r\n    container_name: discovery-server\r\n    ports:\r\n      - \"8761:8761\"\r\n    environment:\r\n      - SPRING_PROFILES_ACTIVE=docker\r\n    depends_on:\r\n      - postgres-db\r\n\r\n  apigateway:\r\n    image: basmafj/apigateway:latest\r\n    container_name: apigateway\r\n    ports:\r\n      - \"9000:9000\"\r\n    expose:\r\n      - \"9000\"\r\n    environment:\r\n      - SPRING_PROFILES_ACTIVE=docker\r\n      - LOGGING_LEVEL_ORG_SPRINGFRAMEWORK_SECURITY= TRACE\r\n    depends_on:\r\n      - discovery-server\r\n\r\n  ## article_feed_Service Docker Compose Config\r\n  article_feed_Service:\r\n    container_name: article_feed_service\r\n    image: basmafj/articles_feed_service:latest\r\n    environment:\r\n      - SPRING_PROFILES_ACTIVE=docker\r\n    depends_on:\r\n      - discovery-server\r\n      - apigateway\r\n\r\n  ## blog_feed_service Docker Compose Config\r\n  blog_feed_service:\r\n    container_name: blog_feed_service\r\n    image: basmafj/blogs_feed_service:latest\r\n    environment:\r\n      - SPRING_PROFILES_ACTIVE=docker\r\n    depends_on:\r\n      - discovery-server\r\n      - apigateway\r\n\r\n  ## login_Service Docker Compose Config\r\n  login_service:\r\n    container_name: login_service\r\n    image: basmafj/login_service:latest\r\n    environment:\r\n      - SPRING_PROFILES_ACTIVE=docker\r\n      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/ProjetJEE\r\n    depends_on:\r\n      - postgres-db\r\n      - discovery-server\r\n      - apigateway\r\n\r\n  ## blog_cr_service Docker Compose Config\r\n  blog_cr_service:\r\n    container_name: blog_cr_service\r\n    image: basmafj/blog_cr_service:latest\r\n    environment:\r\n      - SPRING_PROFILES_ACTIVE=docker\r\n      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/ProjetJEE\r\n    depends_on:\r\n      - postgres-db\r\n      - discovery-server\r\n      - apigateway\r\n\r\nnetworks:\r\n  default:\r\n    driver: bridge\r\n
+===================================================================
+diff --git a/docker-compose.yml b/docker-compose.yml
+--- a/docker-compose.yml	
++++ b/docker-compose.yml	
+@@ -7,7 +7,7 @@
+     environment:
+       POSTGRES_DB: ProjetJEE
+       POSTGRES_USER: postgres
+-      POSTGRES_PASSWORD: basma
++      POSTGRES_PASSWORD: 2002
+       PGDATA: /data/postgres
+     volumes:
+       - ./postgres-data:/data/postgres
+@@ -19,7 +19,7 @@
+ 
+   ## Eureka Server
+   discovery-server:
+-    image: basmafj/discovery-service:latest
++    image: fatimamlk/discovery-service:latest
+     container_name: discovery-server
+     ports:
+       - "8761:8761"
+@@ -29,7 +29,7 @@
+       - postgres-db
+ 
+   apigateway:
+-    image: basmafj/apigateway:latest
++    image: fatimamlk//apigateway:latest
+     container_name: apigateway
+     ports:
+       - "9000:9000"
+@@ -44,7 +44,7 @@
+   ## article_feed_Service Docker Compose Config
+   article_feed_Service:
+     container_name: article_feed_service
+-    image: basmafj/articles_feed_service:latest
++    image: fatimamlk//articles_feed_service:latest
+     environment:
+       - SPRING_PROFILES_ACTIVE=docker
+     depends_on:
+@@ -54,7 +54,7 @@
+   ## blog_feed_service Docker Compose Config
+   blog_feed_service:
+     container_name: blog_feed_service
+-    image: basmafj/blogs_feed_service:latest
++    image: fatimamlk//blogs_feed_service:latest
+     environment:
+       - SPRING_PROFILES_ACTIVE=docker
+     depends_on:
+@@ -64,7 +64,7 @@
+   ## login_Service Docker Compose Config
+   login_service:
+     container_name: login_service
+-    image: basmafj/login_service:latest
++    image: fatimamlk//login_service:latest
+     environment:
+       - SPRING_PROFILES_ACTIVE=docker
+       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/ProjetJEE
+@@ -76,7 +76,7 @@
+   ## blog_cr_service Docker Compose Config
+   blog_cr_service:
+     container_name: blog_cr_service
+-    image: basmafj/blog_cr_service:latest
++    image: fatimamlk//blog_cr_service:latest
+     environment:
+       - SPRING_PROFILES_ACTIVE=docker
+       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/ProjetJEE

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51f85ddd-38d3-4a56-9332-897a7d0e0210" name="Changes" comment="" />
+    <list default="true" id="e38eeee5-1af1-477f-9e9c-225919d3c4c0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +57,6 @@
     "Maven.SpaceNews [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "19",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/hp/SpaceNews/articles_feed_service/src/main/resources/templates",
@@ -154,19 +153,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="SpaceNews" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="SpaceNews" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

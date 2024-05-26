@@ -15,13 +15,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="apigateway" />
         <module name="articles_feed_service" />
         <module name="Discovery_service" />
         <module name="reports_feed_service" />
         <module name="Login_service" />
         <module name="blog_cr_service" />
         <module name="Blogs_feed_service" />
-        <module name="ApiGateway" />
+        <module name="discovery-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,8 +36,10 @@
       <module name="Blogs_feed_service" options="-parameters" />
       <module name="Discovery_service" options="-parameters" />
       <module name="Login_service" options="-parameters" />
+      <module name="apigateway" options="-parameters" />
       <module name="articles_feed_service" options="-parameters" />
       <module name="blog_cr_service" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
     </option>
   </component>
 </project>

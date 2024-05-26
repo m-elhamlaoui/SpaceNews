@@ -1,0 +1,50 @@
+Index: ApiGateway/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd\">\r\n    <modelVersion>4.0.0</modelVersion>\r\n    <parent>\r\n        <groupId>org.springframework.boot</groupId>\r\n        <artifactId>spring-boot-starter-parent</artifactId>\r\n        <version>3.1.1</version>\r\n        <relativePath />\r\n    </parent>\r\n    <artifactId>apigateway</artifactId>\r\n    <name>Archetype - ApiGateway</name>\r\n    <url>http://maven.apache.org</url>\r\n    <properties>\r\n        <java.version>17</java.version>\r\n        <spring-cloud.version>2022.0.3</spring-cloud.version>\r\n    </properties>\r\n    <dependencies>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-gateway</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-starter-actuator</artifactId>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.boot</groupId>\r\n            <artifactId>spring-boot-devtools</artifactId>\r\n            <scope>runtime</scope>\r\n        </dependency>\r\n        <dependency>\r\n            <groupId>org.springframework.cloud</groupId>\r\n            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>\r\n        </dependency>\r\n</dependencies>\r\n    <dependencyManagement>\r\n        <dependencies>\r\n            <dependency>\r\n                <groupId>org.springframework.cloud</groupId>\r\n                <artifactId>spring-cloud-dependencies</artifactId>\r\n                <version>${spring-cloud.version}</version>\r\n                <type>pom</type>\r\n                <scope>import</scope>\r\n            </dependency>\r\n        </dependencies>\r\n    </dependencyManagement>\r\n    <build>\r\n        <plugins>\r\n            <plugin>\r\n                <groupId>org.springframework.boot</groupId>\r\n                <artifactId>spring-boot-maven-plugin</artifactId>\r\n            </plugin>\r\n            <plugin>\r\n                <groupId>com.google.cloud.tools</groupId>\r\n                <artifactId>jib-maven-plugin</artifactId>\r\n                <version>3.4.2</version>\r\n                <configuration>\r\n                    <from>\r\n                        <image>eclipse-temurin:17-jre</image>\r\n                    </from>\r\n                    <to>\r\n                        <image>registry.hub.docker.com/basmafj/apigateway</image>\r\n                    </to>\r\n                </configuration>\r\n            </plugin>\r\n        </plugins>\r\n    </build>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ApiGateway/pom.xml b/ApiGateway/pom.xml
+--- a/ApiGateway/pom.xml	
++++ b/ApiGateway/pom.xml	
+@@ -59,7 +59,7 @@
+                         <image>eclipse-temurin:17-jre</image>
+                     </from>
+                     <to>
+-                        <image>registry.hub.docker.com/basmafj/apigateway</image>
++                        <image>registry.hub.docker.com/fatimamlk/apigateway</image>
+                     </to>
+                 </configuration>
+             </plugin>
+Index: K8s/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/K8s/pom.xml b/K8s/pom.xml
+new file mode 100644
+--- /dev/null	
++++ b/K8s/pom.xml	
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0"
++         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++    <modelVersion>4.0.0</modelVersion>
++    <parent>
++        <groupId>com.Spacenews.app</groupId>
++        <artifactId>SpaceNews</artifactId>
++        <version>1.0-SNAPSHOT</version>
++    </parent>
++
++    <artifactId>K8s</artifactId>
++
++    <properties>
++        <maven.compiler.source>19</maven.compiler.source>
++        <maven.compiler.target>19</maven.compiler.target>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++    </properties>
++
++</project>
+\ No newline at end of file
