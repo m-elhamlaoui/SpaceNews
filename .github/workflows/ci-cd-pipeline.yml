@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - your-branch-name  # Remplacez par la branche que vous voulez utiliser
 
 jobs:
   build:
@@ -27,7 +26,6 @@ jobs:
 
       - name: Build blogs_feed_service
         run: |
-          cd ..  # Retourne au répertoire racine du projet
           cd Blogs_feed_service  # Chemin correct vers le projet Blogs_feed_service
           mvn clean package
 
