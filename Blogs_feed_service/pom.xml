@@ -21,6 +21,12 @@
 
     <dependencies>
         <!-- Spring Boot Dependencies -->
+        <dependency>
+            <groupId>com.Spacenews</groupId>
+            <artifactId>articles_feed_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

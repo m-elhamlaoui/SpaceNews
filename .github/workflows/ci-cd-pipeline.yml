@@ -17,10 +17,17 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '17'
-          distribution: 'adopt'  # Ajoutez cette ligne pour spécifier la distribution
+          distribution: 'adopt'
 
-      - name: Build with Maven
-        run: mvn clean package
+      - name: Build articles_feed_service
+        run: |
+          cd path/to/articles_feed_service
+          mvn clean install
+
+      - name: Build blogs_feed_service
+        run: |
+          cd path/to/blogs_feed_service
+          mvn clean package
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
