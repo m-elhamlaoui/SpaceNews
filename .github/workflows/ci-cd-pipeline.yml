@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,29 +22,23 @@ jobs:
       - name: Set execute permission for Maven Wrapper
         run: chmod +x .mvn/mvnw
 
+      - name: Build Docker images for services
+        run: |
+          ./.mvn/mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=basmafj/articles_feed_service:latest
+          ./.mvn/mvnw compile jib:dockerBuild -pl reports_feed_service -Dimage=basmafj/reports_feed_service:latest
+          ./.mvn/mvnw compile jib:dockerBuild -pl login_service -Dimage=basmafj/login_service:latest
+          ./.mvn/mvnw compile jib:dockerBuild -pl blog_cr_service -Dimage=basmafj/blog_cr_service:latest
+          ./.mvn/mvnw compile jib:dockerBuild -pl ApiGateway -Dimage=basmafj/apigateway:latest
+          ./.mvn/mvnw compile jib:dockerBuild -pl Discovery_service -Dimage=basmafj/discovery_service:latest
 
-      - name: Build and push Docker images for articles_feed_service
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=registry.hub.docker.com/basmafj/articles_feed_service:latest
-
-      - name: Build and push Docker images for reports_feed_service
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl reports_feed_service -Dimage=registry.hub.docker.com/basmafj/reports_feed_service:latest
-
-      - name: Build and push Docker images for login_service
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl login_service -Dimage=registry.hub.docker.com/basmafj/login_service:latest
-
-      - name: Build and push Docker images for blog_cr_service
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl blog_cr_service -Dimage=registry.hub.docker.com/basmafj/blog_cr_service:latest
-
-      - name: Build and push Docker images for ApiGateway
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl ApiGateway -Dimage=registry.hub.docker.com/basmafj/apigateway:latest
-
-      - name: Build and push Docker images for Discovery_service
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl Discovery_service -Dimage=registry.hub.docker.com/basmafj/discovery_service:latest
+      - name: List Docker images
+        run: docker images
 
       - name: Log in to Docker Hub
         env:
           DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
         run: echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
       - name: Push Docker images to Docker Hub
         run: |
           docker push basmafj/articles_feed_service:latest
@@ -54,11 +48,9 @@ jobs:
           docker push basmafj/apigateway:latest
           docker push basmafj/discovery_service:latest
 
-
-
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-and-push
 
     steps:
       - name: Checkout code
@@ -81,6 +73,5 @@ jobs:
           kubectl apply -f k8s/login-service-deployment.yaml
           kubectl apply -f k8s/articles-feed-service-deployment.yaml
           kubectl apply -f k8s/blog-cr-service-deployment.yaml
-          kubectl apply -f k8s/blog-feed-service-deployment.yaml
           kubectl apply -f k8s/postgres-db-deployment.yaml
           kubectl apply -f k8s/postgres-db-claim0-persistentvolumeclaim.yaml
