@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: basmafj/apigateway:latest
+          image: basmafj/frontend-service:latest
           ports:
             - containerPort: 9500
           resources: {}
