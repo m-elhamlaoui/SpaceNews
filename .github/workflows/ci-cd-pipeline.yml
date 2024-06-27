@@ -22,8 +22,6 @@ jobs:
       - name: Set execute permission for Maven Wrapper
         run: chmod +x .mvn/mvnw
 
-      - name: Build and install projects
-        run: ./.mvn/mvnw clean install
 
       - name: Build and push Docker images for articles_feed_service
         run: ./.mvn/mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=registry.hub.docker.com/basmafj/articles_feed_service:latest
