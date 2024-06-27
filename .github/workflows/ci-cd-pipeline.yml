@@ -34,22 +34,30 @@ jobs:
           name: test-results
           path: articles_feed_service/target/surefire-reports/
 
-      - name: Build Docker images
+      - name: Build and push articles_feed_service Docker image
         run: |
-          docker build -t basmafj/articles_feed_service:latest articles_feed_service
-          docker build -t basmafj/discovery-service:latest discovery_service
-          docker build -t basmafj/login_service:latest login_service
-          docker build -t basmafj/blog-feed-service:latest blog_feed_service
-          docker build -t basmafj/postgres-db:latest postgres_db
+          cd articles_feed_service
+          ./mvnw compile jib:build -Dimage=basmafj/articles_feed_service:latest
 
-      - name: Push Docker images
+      - name: Build and push discovery-service Docker image
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-          docker push basmafj/articles_feed_service:latest
-          docker push basmafj/discovery-service:latest
-          docker push basmafj/login_service:latest
-          docker push basmafj/blog-feed-service:latest
-          docker push basmafj/postgres-db:latest
+          cd ../discovery_service
+          ./mvnw compile jib:build -Dimage=basmafj/discovery-service:latest
+
+      - name: Build and push login_service Docker image
+        run: |
+          cd ../login_service
+          ./mvnw compile jib:build -Dimage=basmafj/login_service:latest
+
+      - name: Build and push blog-feed-service Docker image
+        run: |
+          cd ../blog_feed_service
+          ./mvnw compile jib:build -Dimage=basmafj/blog-feed-service:latest
+
+      - name: Build and push postgres-db Docker image
+        run: |
+          cd ../postgres_db
+          ./mvnw compile jib:build -Dimage=basmafj/postgres-db:latest
 
   deploy:
     runs-on: ubuntu-latest
