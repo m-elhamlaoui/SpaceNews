@@ -19,7 +19,6 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
-      # Build and install all services using Jib
       - name: Build and push Docker images with Jib
         run: |
           cd articles_feed_service
