@@ -41,7 +41,7 @@ jobs:
 
       - name: Push Docker images to Docker Hub
         run: |
-          docker push basmafj/article_feed_service:latest
+          docker push basmafj/articles_feed_service:latest
           docker push basmafj/reports_feed_service:latest
           docker push basmafj/login_service:latest
           docker push basmafj/blog_cr_service:latest
@@ -71,7 +71,7 @@ jobs:
           kubectl apply -f k8s/apigateway-deployment.yaml
           kubectl apply -f k8s/discovery-server-deployment.yaml
           kubectl apply -f k8s/login-service-deployment.yaml
-          kubectl apply -f k8s/articles-feed-service-deployment.yaml
+          kubectl apply -f k8s/article-feed-service-deployment.yaml
           kubectl apply -f k8s/blog-cr-service-deployment.yaml
           kubectl apply -f k8s/postgres-db-deployment.yaml
           kubectl apply -f k8s/postgres-db-claim0-persistentvolumeclaim.yaml
