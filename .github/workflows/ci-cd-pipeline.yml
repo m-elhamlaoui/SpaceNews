@@ -19,34 +19,44 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Generate Maven Wrapper
+        run: |
+          cd articles_feed_service  # Navigate to your project directory
+          mvn -N io.takari:maven:wrapper
+
       - name: Build and install articles_feed_service
         run: |
-          cd articles_feed_service  # Chemin correct vers le projet articles_feed_service
-          mvn clean install
+          cd articles_feed_service
+          ./mvnw clean install
+          ./mvnw compile jib:dockerBuild --projects articles_feed_service
 
-      - name: Build blogs_feed_service
+      # Repeat similar steps for other services using Jib
+      # Example for blog-cr-service using Jib
+      - name: Build and install blog-cr-service
         run: |
-          cd Blogs_feed_service  # Chemin correct vers le projet Blogs_feed_service
-          mvn clean package
+          cd blog_cr_service
+          ./mvnw clean install
+          ./mvnw compile jib:dockerBuild --projects blog_cr_service
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v2
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      # Example for services with Dockerfile
+      # Build Docker images
+      - name: Build Docker images
+        run: |
+          docker build -t basmafj/articles_feed_service:latest articles_feed_service
+          docker build -t basmafj/discovery-service:latest discovery_service
+          docker build -t basmafj/login_service:latest login_service
+          docker build -t basmafj/blog-feed-service:latest blog_feed_service
+          docker build -t basmafj/postgres-db:latest postgres_db
 
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          push: true
-          tags: |
-            ${{ secrets.DOCKER_HUB_USERNAME }}/apigateway:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/discovery-service:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/login_service:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/articles_feed_service:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/blog_cr_service:latest
-            ${{ secrets.DOCKER_HUB_USERNAME }}/blogs_feed_service:latest
+      # Push Docker images to Docker Hub or another registry
+      - name: Push Docker images
+        run: |
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+          docker push basmafj/articles_feed_service:latest
+          docker push basmafj/discovery-service:latest
+          docker push basmafj/login_service:latest
+          docker push basmafj/blog-feed-service:latest
+          docker push basmafj/postgres-db:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -56,20 +66,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v1
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
         with:
-          version: 'v1.20.0'
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1  # Replace with your AWS region
 
-      - name: Deploy to Kubernetes
-        env:
-          KUBECONFIG: ${{ secrets.MINIKUBE_KUBECONFIG }}
+      - name: Update kubeconfig for Amazon EKS
+        run: aws eks update-kubeconfig --name spacenews --region eu-north-1
+
+      - name: Deploy to Amazon EKS
         run: |
-          echo "$KUBECONFIG" | base64 --decode > $HOME/.kube/config
           kubectl apply -f k8s/apigateway-deployment.yaml
           kubectl apply -f k8s/discovery-server-deployment.yaml
           kubectl apply -f k8s/login-service-deployment.yaml
-          kubectl apply -f k8s/articles-feed-service-deployment.yaml
+          kubectl apply -f k8s/article-feed-service-deployment.yaml
           kubectl apply -f k8s/blog-cr-service-deployment.yaml
           kubectl apply -f k8s/blog-feed-service-deployment.yaml
           kubectl apply -f k8s/postgres-db-deployment.yaml
