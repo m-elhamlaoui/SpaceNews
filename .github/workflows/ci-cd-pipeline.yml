@@ -19,45 +19,23 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
-      - name: Build and install all modules
-        run: mvn clean install
-        continue-on-error: true
-
-      - name: Run tests
-        run: mvn test
-        continue-on-error: true
-
-      - name: Upload test results
-        if: failure()
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: articles_feed_service/target/surefire-reports/
-
-      - name: Build and push articles_feed_service Docker image
+      # Build and install all services using Jib
+      - name: Build and push Docker images with Jib
         run: |
           cd articles_feed_service
-          mvn compile jib:build -Dimage=basmafj/articles_feed_service:latest
-
-      - name: Build and push discovery-service Docker image
-        run: |
-          cd discovery_service
-          mvn compile jib:build -Dimage=basmafj/discovery-service:latest
-
-      - name: Build and push login_service Docker image
-        run: |
-          cd login_service
-          mvn compile jib:build -Dimage=basmafj/login_service:latest
-
-      - name: Build and push blog-feed-service Docker image
-        run: |
-          cd blog_feed_service
-          mvn compile jib:build -Dimage=basmafj/blog-feed-service:latest
-
-      - name: Build and push postgres-db Docker image
-        run: |
-          cd postgres_db
-          mvn compile jib:build -Dimage=basmafj/postgres-db:latest
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/articles_feed_service:latest
+          cd ../Blogs_feed_service
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/blogs_feed_service:latest
+          cd ../reports_feed_service
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/reports_feed_service:latest
+          cd ../login_service
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/login_service:latest
+          cd ../blog_cr_service
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/blog_cr_service:latest
+          cd ../ApiGateway
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/apigateway:latest
+          cd ../Discovery_service
+          ./mvnw compile jib:dockerBuild -Dimage=basmafj/discovery_service:latest
 
   deploy:
     runs-on: ubuntu-latest
