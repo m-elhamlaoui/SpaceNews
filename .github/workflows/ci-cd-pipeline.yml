@@ -41,16 +41,19 @@ jobs:
       - name: Build and push Docker images for Discovery_service
         run: ./.mvn/mvnw compile jib:dockerBuild -pl Discovery_service -Dimage=registry.hub.docker.com/basmafj/discovery_service:latest
 
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
       - name: Push Docker images to Docker Hub
         run: |
-          echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           docker push registry.hub.docker.com/basmafj/articles_feed_service:latest
-          docker push registry.hub.docker.com/basmafj/Blogs_feed_service:latest
+          docker push registry.hub.docker.com/basmafj/blogs_feed_service:latest
           docker push registry.hub.docker.com/basmafj/reports_feed_service:latest
           docker push registry.hub.docker.com/basmafj/login_service:latest
           docker push registry.hub.docker.com/basmafj/blog_cr_service:latest
           docker push registry.hub.docker.com/basmafj/apigateway:latest
           docker push registry.hub.docker.com/basmafj/discovery_service:latest
+
 
   deploy:
     runs-on: ubuntu-latest
