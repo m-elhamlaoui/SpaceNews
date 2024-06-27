@@ -19,6 +19,10 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Build and install all modules
+        run: |
+          ./mvnw clean install -DskipTests
+
       - name: Build and push Docker images with Jib
         run: |
           cd articles_feed_service
