@@ -20,7 +20,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Set execute permission for Maven Wrapper
-        run: chmod +x mvnw
+        run: chmod +x /.mvn/mvnw
 
       - name: Build and install projects
         run: ./mvnw clean install
