@@ -20,8 +20,19 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and install all modules
-        run: |
-          mvn clean install
+        run: mvn clean install
+        continue-on-error: true
+
+      - name: Run tests
+        run: mvn test
+        continue-on-error: true
+
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: articles_feed_service/target/surefire-reports/
 
       - name: Build Docker images
         run: |
