@@ -19,13 +19,8 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
-      - name: Set up Maven
-        uses: actions/setup-java@v2
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-
-     
+      - name: Build and install projects
+        run: ./mvnw clean install
 
       - name: Build and push Docker images for articles_feed_service
         run: ./mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=registry.hub.docker.com/basmafj/articles_feed_service:latest
