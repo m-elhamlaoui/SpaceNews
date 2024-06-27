@@ -17,10 +17,21 @@ spec:
       containers:
         - name: article-feed-service
           image: basmafj/articles_feed_service:latest
+          ports:
+            - containerPort: 8080
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: docker
-          ports:
-            - containerPort: 8080
-          resources: {}
-      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: article-feed-service
+spec:
+  selector:
+    app: article-feed-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
