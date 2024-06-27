@@ -20,31 +20,31 @@ jobs:
           distribution: 'adopt'
 
       - name: Set execute permission for Maven Wrapper
-        run: chmod +x ./mvnw
+        run: chmod +x .mvn/mvnw
 
       - name: Build and install projects
-        run: ./mvnw clean install
+        run: ./.mvn/mvnw clean install
 
       - name: Build and push Docker images for articles_feed_service
-        run: ./mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=registry.hub.docker.com/basmafj/articles_feed_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=registry.hub.docker.com/basmafj/articles_feed_service:latest
 
       - name: Build and push Docker images for blogs_feed_service
-        run: ./mvnw compile jib:dockerBuild -pl blogs_feed_service -Dimage=registry.hub.docker.com/basmafj/blogs_feed_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl blogs_feed_service -Dimage=registry.hub.docker.com/basmafj/blogs_feed_service:latest
 
       - name: Build and push Docker images for reports_feed_service
-        run: ./mvnw compile jib:dockerBuild -pl reports_feed_service -Dimage=registry.hub.docker.com/basmafj/reports_feed_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl reports_feed_service -Dimage=registry.hub.docker.com/basmafj/reports_feed_service:latest
 
       - name: Build and push Docker images for login_service
-        run: ./mvnw compile jib:dockerBuild -pl login_service -Dimage=registry.hub.docker.com/basmafj/login_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl login_service -Dimage=registry.hub.docker.com/basmafj/login_service:latest
 
       - name: Build and push Docker images for blog_cr_service
-        run: ./mvnw compile jib:dockerBuild -pl blog_cr_service -Dimage=registry.hub.docker.com/basmafj/blog_cr_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl blog_cr_service -Dimage=registry.hub.docker.com/basmafj/blog_cr_service:latest
 
       - name: Build and push Docker images for ApiGateway
-        run: ./mvnw compile jib:dockerBuild -pl ApiGateway -Dimage=registry.hub.docker.com/basmafj/apigateway:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl ApiGateway -Dimage=registry.hub.docker.com/basmafj/apigateway:latest
 
       - name: Build and push Docker images for Discovery_service
-        run: ./mvnw compile jib:dockerBuild -pl Discovery_service -Dimage=registry.hub.docker.com/basmafj/discovery_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl Discovery_service -Dimage=registry.hub.docker.com/basmafj/discovery_service:latest
 
       - name: Push Docker images to Docker Hub
         run: |
