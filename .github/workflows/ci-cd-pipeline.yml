@@ -37,27 +37,27 @@ jobs:
       - name: Build and push articles_feed_service Docker image
         run: |
           cd articles_feed_service
-          ./mvnw compile jib:build -Dimage=basmafj/articles_feed_service:latest
+          mvn compile jib:build -Dimage=basmafj/articles_feed_service:latest
 
       - name: Build and push discovery-service Docker image
         run: |
-          cd ../discovery_service
-          ./mvnw compile jib:build -Dimage=basmafj/discovery-service:latest
+          cd discovery_service
+          mvn compile jib:build -Dimage=basmafj/discovery-service:latest
 
       - name: Build and push login_service Docker image
         run: |
-          cd ../login_service
-          ./mvnw compile jib:build -Dimage=basmafj/login_service:latest
+          cd login_service
+          mvn compile jib:build -Dimage=basmafj/login_service:latest
 
       - name: Build and push blog-feed-service Docker image
         run: |
-          cd ../blog_feed_service
-          ./mvnw compile jib:build -Dimage=basmafj/blog-feed-service:latest
+          cd blog_feed_service
+          mvn compile jib:build -Dimage=basmafj/blog-feed-service:latest
 
       - name: Build and push postgres-db Docker image
         run: |
-          cd ../postgres_db
-          ./mvnw compile jib:build -Dimage=basmafj/postgres-db:latest
+          cd postgres_db
+          mvn compile jib:build -Dimage=basmafj/postgres-db:latest
 
   deploy:
     runs-on: ubuntu-latest
