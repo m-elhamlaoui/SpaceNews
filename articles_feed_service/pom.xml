@@ -91,7 +91,7 @@
             <image>eclipse-temurin:17-jre</image>
           </from>
           <to>
-            <image>registry.hub.docker.com/basmafj/articles_feed_service</image>
+             <image>docker.io/basmafj/articles_feed_service:latest</image>
           </to>
           <container>
             <mainClass>com.SpaceNews.articlesfeed.ArticlesNewsApplication</mainClass>
