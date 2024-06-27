@@ -47,7 +47,7 @@ jobs:
         run: echo "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
       - name: Push Docker images to Docker Hub
         run: |
-          docker push registry.hub.docker.com/basmafj/articles_feed_service:latest
+          docker push basmafj/articles_feed_service:latest
           docker push registry.hub.docker.com/basmafj/blogs_feed_service:latest
           docker push registry.hub.docker.com/basmafj/reports_feed_service:latest
           docker push registry.hub.docker.com/basmafj/login_service:latest
