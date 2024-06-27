@@ -21,7 +21,7 @@ jobs:
 
       - name: Build and push Docker images with Jib
         run: |
-          cd articles_feed_service
+          cd ../articles_feed_service
           ./mvnw compile jib:dockerBuild -Dimage=basmafj/articles_feed_service:latest
           cd ../Blogs_feed_service
           ./mvnw compile jib:dockerBuild -Dimage=basmafj/blogs_feed_service:latest
