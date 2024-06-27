@@ -48,12 +48,12 @@ jobs:
       - name: Push Docker images to Docker Hub
         run: |
           docker push basmafj/articles_feed_service:latest
-          docker push registry.hub.docker.com/basmafj/blogs_feed_service:latest
-          docker push registry.hub.docker.com/basmafj/reports_feed_service:latest
-          docker push registry.hub.docker.com/basmafj/login_service:latest
-          docker push registry.hub.docker.com/basmafj/blog_cr_service:latest
-          docker push registry.hub.docker.com/basmafj/apigateway:latest
-          docker push registry.hub.docker.com/basmafj/discovery_service:latest
+          docker push basmafj/reports_feed_service:latest
+          docker push basmafj/login_service:latest
+          docker push basmafj/blog_cr_service:latest
+          docker push basmafj/apigateway:latest
+          docker push basmafj/discovery_service:latest
+
 
 
   deploy:
