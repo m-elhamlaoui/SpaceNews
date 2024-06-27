@@ -73,5 +73,6 @@ jobs:
           kubectl apply -f k8s/login-service-deployment.yaml
           kubectl apply -f k8s/article-feed-service-deployment.yaml
           kubectl apply -f k8s/blog-cr-service-deployment.yaml
+          kubectl apply -f k8s/frontend-deployment.yaml
           kubectl apply -f k8s/postgres-db-deployment.yaml
           kubectl apply -f k8s/postgres-db-claim0-persistentvolumeclaim.yaml
