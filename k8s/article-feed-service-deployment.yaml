@@ -1,35 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: C:\Users\hp\kompose.exe convert
-    kompose.version: 1.26.0 (40646f47)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: article-feed-service
   name: article-feed-service
+  labels:
+    app: article-feed-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: article-feed-service
-  strategy: {}
+      app: article-feed-service
   template:
     metadata:
-      annotations:
-        kompose.cmd: C:\Users\hp\kompose.exe convert
-        kompose.version: 1.26.0 (40646f47)
-      creationTimestamp: null
       labels:
-        io.kompose.network: "true" # Cette ligne a été corrigée
-        io.kompose.service: article-feed-service
+        app: article-feed-service
     spec:
       containers:
-        - env:
+        - name: article-feed-service
+          image: basmafj/articles_feed_service:latest
+          env:
             - name: SPRING_PROFILES_ACTIVE
               value: docker
-          image: basmafj/articles_feed_service:latest
-          name: article-feed-service
+          ports:
+            - containerPort: 8080
           resources: {}
       restartPolicy: Always
-status: {}
