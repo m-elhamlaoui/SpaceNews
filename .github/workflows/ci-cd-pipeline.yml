@@ -27,7 +27,7 @@ jobs:
         run: ./.mvn/mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=registry.hub.docker.com/basmafj/articles_feed_service:latest
 
       - name: Build and push Docker images for blogs_feed_service
-        run: ./.mvn/mvnw compile jib:dockerBuild -pl blogs_feed_service -Dimage=registry.hub.docker.com/basmafj/blogs_feed_service:latest
+        run: ./.mvn/mvnw compile jib:dockerBuild -pl Blogs_feed_service -Dimage=registry.hub.docker.com/basmafj/blogs_feed_service:latest
 
       - name: Build and push Docker images for reports_feed_service
         run: ./.mvn/mvnw compile jib:dockerBuild -pl reports_feed_service -Dimage=registry.hub.docker.com/basmafj/reports_feed_service:latest
@@ -48,7 +48,7 @@ jobs:
         run: |
           echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
           docker push registry.hub.docker.com/basmafj/articles_feed_service:latest
-          docker push registry.hub.docker.com/basmafj/blogs_feed_service:latest
+          docker push registry.hub.docker.com/basmafj/Blogs_feed_service:latest
           docker push registry.hub.docker.com/basmafj/reports_feed_service:latest
           docker push registry.hub.docker.com/basmafj/login_service:latest
           docker push registry.hub.docker.com/basmafj/blog_cr_service:latest
