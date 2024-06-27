@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: basmafj/apigateway:latest  # Assurez-vous que l'image est correcte
+          image: basmafj/apigateway:latest
           ports:
             - containerPort: 9500
+          resources: {}
+      restartPolicy: Always
