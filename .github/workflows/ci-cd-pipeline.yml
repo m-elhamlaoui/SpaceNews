@@ -41,7 +41,7 @@ jobs:
 
       - name: Push Docker images to Docker Hub
         run: |
-          docker push basmafj/articles_feed_service:latest
+          docker push basmafj/article_feed_service:latest
           docker push basmafj/reports_feed_service:latest
           docker push basmafj/login_service:latest
           docker push basmafj/blog_cr_service:latest
