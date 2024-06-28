@@ -6,10 +6,10 @@ Space News Application is a modern platform that provides the latest news and ar
 
 ## Table of Contents
 
-- [1. Description](#description)
-- [2. Diagrams](#diagrams)
+- [1. Description of project](#description)
+- [2. UML Diagrams](#diagrams)
 - [3. Microservices](#microservices)
-- [4. Communication between microservices using api gateway](#api-gateway)
+- [4. Communication between microservices](#api-gateway)
 - [5. Discovery Service (Eureka)](#discovery-service-eureka)
 - [6. Project Architecture](#project-architecture)
 - [7. Containerizing microservices using Docker](#containerizing-microservices-using-docker)
@@ -58,7 +58,7 @@ Sequence Diagram
     - Viewing blogs published by other users.
     - deleting their own blogs.
 
-## Communication between microservices using API Gateway (Spring Cloud Gateway)
+## api-gateway
 Spring Cloud Gateway is an API gateway that serves as a single entry point for all client requests to backend microservices. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
 
 ### How it Works
