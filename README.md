@@ -37,29 +37,34 @@ Sequence Diagram
 ![Sequence Diagram](./documents/sq_JEE.png)
 
 ## Setting Up Microservices
+  ### 1. Overview
 
-### 1. Login Service
-- **Description:** This service handles user registration, login, and management.
+**Login Service**: This service handles user registration, login, and management.
 - **Features:**
     - Registration of a new user with information such as name, email, and password.
     - User authentication during login.
 
-### 2. Articles Service
-- **Description:** This service manages the of articles related to space.
+**Articles Service**: This service manages the of articles related to space.
 - **Features:**
     - Display daily articles for users sourced from the Spaceflight API.
       
-### 3. Blogs Service
-- **Description:** This service manages the of blogs related to space.
+**Blogs Service**: This service manages the of blogs related to space.
 - **Features:**
     - Display daily blogs for users sourced from the Spaceflight API.
 
-### 4. UserBlog Service
-- **Description:** This service offers a platform for users to share blogs and ideas with others.
+**UserBlog Service**: This service offers a platform for users to share blogs and ideas with others.
 - **Features:**
     - Users can publish their own blogs on space-related topics.
     - Viewing blogs published by other users.
     - deleting their own blogs.
+ 
+  ### 2. Prequeries
+
+Before you begin, ensure you have the following installed on your machine:
+
+- Java Development Kit (JDK) 11 or later
+- Apache Maven 3.6.0 or later
+- Docker (for running databases and other services)
 
 ## Project Architecture
 
