@@ -19,7 +19,7 @@ Space News Application is a modern platform that provides the latest news and ar
   - [2. Set Up](#2-set-up)
 - [10. Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
 - [11. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
-- [12. CI/CD Pipeline for Microservices Project](#CI/CD-Pipeline-for-Microservices-Project)
+- [12. CI/CD Pipeline for Microservices Project](#ci/cd-pipeline-for-microservices-project)
 - [14. Deployment workflow diagram](#Deployment-workflow-diagram)
 - [15. Contributors](#contributors)
 - [16. License](#license)
