@@ -295,7 +295,7 @@ Docker is a **containerization technology** that allows developers to package an
 
    ```sh
    docker-compose up --build
-## 10. Deploy microservices to local Kubernetes
+## Deploy microservices to local Kubernetes
 
 ### Step 1: Start Minikube
 
