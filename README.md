@@ -13,6 +13,11 @@ Space News Application is a modern platform that provides the latest news and ar
 - [Microservices](#microservices)
 - [API Gateway](#api-gateway)
 - [Discovery Service (Eureka)](#discovery-service-eureka)
+- [Containerizing microservices using Docker](#containerizing-microservices-using-docker)
+  - [1. Docker — Overview](#1-docker--overview)
+  - [2. Set Up](#2-set-up)
+- [Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
+- [deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
@@ -71,13 +76,6 @@ The application is designed using a microservices architecture. The different mi
     - Viewing blogs published by other users.
     - Interaction with blogs by leaving comments and reactions.
     - Blog management by users, including editing and deleting their own blogs.
-
-### 5. Chatbot Assistant
-- **Description:** This service provides a chatbot interface to answer user questions and provide assistance.
-- **Features:**
-    - Automatic response to common questions about space.
-    - Personalized assistance based on user queries.
-    - Integration with SAP Conversational AI for smooth interaction.
 
 
 ## Eureka (Discovery Service)
@@ -170,21 +168,38 @@ Add the following dependencies to your pom.xml file:
    ```sh
    cd eureka-service
    mvn spring-boot:run
+ 
 4. **Start the microservices**
    ```sh
-   cd login-service
+   cd article-feed-service
    mvn spring-boot:run
-   cd ../articles-service
+   cd ../blog-cr-service
    mvn spring-boot:run
-   cd ../home-service
+   cd ../discovery-service
    mvn spring-boot:run
-   cd ../community-service
+   cd ../frontend-service
    mvn spring-boot:run
-   cd ../chatbot-service
+   cd ../login-service
    mvn spring-boot:run
    cd ../api-gateway
    mvn spring-boot:run
 
+## Containerizing microservices using Docker
+
+### 1. Docker — Overview
+
+Docker is a **containerization technology** that allows developers to package an application along with all its dependencies into a container. These containers are lightweight, portable, and can run on any platform that supports Docker. A docker container simplifies the process of building, shipping, and running applications, making it easier to manage and scale them.
+
+#### Four Major Components of Docker
+
+- **Container:** A container is a standalone executable package that includes an application and all its dependencies.
+
+- **Image:** An image is a read-only template that defines the contents and configuration of a container.
+
+- **Docker Engine:** The Docker Engine is the core component responsible for building, running, and managing containers.
+
+- **Registry:** Docker images can be stored and shared in registries, which act as centralized repositories.
+  ### 2. Set Up
 5. **Alternatively, you can use Docker Compose to start all services:**
 
    ```sh
@@ -201,7 +216,7 @@ http://localhost:8761
 - Articles Service: http://localhost:8080/articles
 - Home Service: http://localhost:8080/home
 - Community Service: http://localhost:8080/community
-- Chatbot Service: http://localhost:8080/chatbot
+
 
 ### Technologies Used
 1. **Backend:**
