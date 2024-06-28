@@ -7,26 +7,41 @@ Space News Application is a modern platform that provides the latest news and ar
 ## Table of Contents
 
 - [1. Project description](#description)
-- [2. UML Diagrams](#diagrams)
-- [3. Microservices](#microservices)
-- [4. Communication between microservices](#api-gateway)
-- [5. Discovery Service (Eureka)](#discovery-service-eureka)
-- [6. Project Architecture](#project-architecture)
-- [7. Containerizing microservices using Docker](#containerizing-microservices-using-docker)
+- [2.Technologies Used](#technologies-used)
+- [3. UML Diagrams](#diagrams)
+- [4. Microservices](#microservices)
+- [5. Communication between microservices](#api-gateway)
+- [6. Discovery Service (Eureka)](#discovery-service-eureka)
+- [7. Project Architecture](#project-architecture)
+- [8. Installation](#installation)
+- [9. Containerizing microservices using Docker](#containerizing-microservices-using-docker)
   - [1. Docker — Overview](#1-docker--overview)
   - [2. Set Up](#2-set-up)
-- [8. Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
-- [9. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
-- [10. Installation](#installation)
-- [11. Usage](#usage)
+- [10. Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
+- [11. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
 - [12. CI/CD Pipeline for Microservices Project](#CI/CD-Pipeline-for-Microservices-Project)
-- [13 .Technologies Used](#technologies-used)
 - [14. Contributors](#contributors)
 - [15. License](#license)
 
 ## 1- Project description
 
 The Space News application excels with its modular and scalable design, enabling efficient feature management and easy extensibility. It utilizes modern technologies like Spring Boot, Spring Cloud, PostgreSQL, and Docker, ensuring optimal performance and simplified maintenance. With a microservices architecture, the application enhances scalability and maintainability. The backend is developed using Spring Boot, while the frontend employs HTML, CSS, and JavaScript.
+## Technologies Used
+1. **Backend:**
+- Spring Boot
+- Spring Cloud Gateway
+- Spring Security
+- Spring Data JPA
+- Database:
+- PostgreSQL
+2. **Frontend:**
+- HTML
+- CSS
+- Bootstrap
+- Chatbot:
+- SAP Conversational AI
+- Discovery Service:
+- Eureka
 
 ## 2- UML diagrams
 Use Case
@@ -221,7 +236,6 @@ public class ExampleMicroserviceApplication {
 The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
 
 ![Architecture Diagram](./documents/architecture.jpg)
-
 ## Installation
 
 ### Prerequisites
@@ -259,6 +273,7 @@ The application is designed using a microservices architecture. The different mi
    cd ../api-gateway
    mvn spring-boot:run
 
+
 ## Containerizing microservices using Docker
 
 ### 1. Docker — Overview
@@ -279,7 +294,39 @@ Docker is a **containerization technology** that allows developers to package an
 
    ```sh
    docker-compose up --build
-# CI/CD Pipeline for Microservices Project
+## 10. Deploy microservices to local Kubernetes
+
+### Step 1: Start Minikube
+
+  ```sh
+minikube start
+eval $(minikube -p minikube docker-env)
+cd articles-feed-service
+docker build -t articles-feed-service:latest .
+cd ../blogs-feed-service
+docker build -t blogs-feed-service:latest .
+cd ../userblog-service
+docker build -t userblog-service:latest .
+cd ../login-service
+docker build -t login-service:latest .
+cd ../apigateway
+docker build -t apigateway:latest .
+cd ../discovery-service
+
+docker build -t discovery-service:latest .
+kubectl apply -f kubernetes/articles-feed-service-deployment.yaml
+kubectl apply -f kubernetes/articles-feed-service-service.yaml
+kubectl apply -f kubernetes/blogs-feed-service-deployment.yaml
+kubectl apply -f kubernetes/blogs-feed-service-service.yaml
+kubectl apply -f kubernetes/login-service-deployment.yaml
+kubectl apply -f kubernetes/login-service-service.yaml
+kubectl apply -f kubernetes/apigateway-deployment.yaml
+kubectl apply -f kubernetes/apigateway-service.yaml
+kubectl apply -f kubernetes/discovery-service-deployment.yaml
+kubectl apply -f kubernetes/discovery-service-service.yaml
+
+´´´
+#CI/CD Pipeline for Microservices Project
 
 This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
@@ -335,31 +382,6 @@ To manually deploy the services to your EKS cluster, you can use the following c
 
 ```sh
 kubectl apply -f k8s/
-
-### Technologies Used
-1. **Backend:**
-- Spring Boot
-- Spring Cloud Gateway
-- Spring Security
-- Spring Data JPA
-- Database:
-- PostgreSQL
-2. **Frontend:**
-- HTML
-- CSS
-- Bootstrap
-- Chatbot:
-- SAP Conversational AI
-- Discovery Service:
-- Eureka
-
-## Unit Tests
-
-Some microservices of the Space News application have undergone unit testing to ensure their correct operation and robustness. Unit tests are an essential practice to identify and correct potential bugs, as well as to ensure code quality. The following microservices have been tested:
-
-- **Login Service:** Unit tests have been written to verify the proper functioning of user registration, login, and management features.
-- **Articles Service:** Unit tests have been performed to ensure that CRUD (Create, Read, Update, Delete) operations on articles work correctly. These tests cover scenarios such as adding new articles, retrieving existing articles, updating article information, and deleting articles from the database.
-- **Community Service:** Unit tests have been conducted to validate the functionality related to publishing, viewing, and managing blogs. These tests verify that users can publish their own blogs, view blogs authored by others, and perform actions such as editing and deleting their own blogs.
 
 
 ## Contributors
