@@ -8,7 +8,6 @@ Space News Application is a modern platform that provides the latest news and ar
 
 - [Description](#description)
 - [Diagrams](#diagrams)
-- [Features](#features)
 - [Project Architecture](#project-architecture)
 - [Microservices](#microservices)
 - [API Gateway](#api-gateway)
