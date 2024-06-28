@@ -58,7 +58,7 @@ Sequence Diagram
     - Viewing blogs published by other users.
     - deleting their own blogs.
 
-## api-gateway
+## Communication between microservices
 Spring Cloud Gateway is an API gateway that serves as a single entry point for all client requests to backend microservices. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
 
 ### How it Works
@@ -104,7 +104,7 @@ Add the following dependencies to your pom.xml file:
  </dependency>
  ```
 
-## Eureka (Discovery Service)
+## Discovery Service (Eureka)
 
 Spring Cloud Eureka is a discovery service that allows applications to find and communicate with each other without needing to know their exact locations. This is particularly useful in a microservices architecture where service instances can dynamically change due to scaling, deployment, or failures.
 
