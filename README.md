@@ -335,17 +335,17 @@ kubectl apply -f kubernetes/discovery-service-service.yaml
 
 This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
-## Prerequisites
+### Prerequisites
 
 - Docker Hub account
 - AWS account with EKS cluster named `spacenews` in the `eu-north-1` region
 - GitHub repository with the necessary secrets configured
 
-## CI/CD Pipeline
+### CI/CD Pipeline
 
 The CI/CD pipeline is defined in `.github/workflows/ci-cd-pipeline.yml` and consists of two jobs: `build-and-push` and `deploy`.
 
-### build-and-push Job
+#### build-and-push Job
 
 This job runs on every push to the `main` branch and performs the following steps:
 
