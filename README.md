@@ -8,7 +8,7 @@ Space News Application is a modern platform that provides the latest news and ar
 
 - [1. Description](#description)
 - [2. Diagrams](#diagrams)
-- [3. Microservices](#Setting up microservices)
+- [3. Setting Up Microservices](#setting-up-microservices)
   - [1. Overview](#1-overview)
   - [2. Prequeries](#2-prequeries)
 - [4. Project Architecture](#project-architecture)
@@ -36,34 +36,30 @@ Use Case
 Sequence Diagram
 ![Sequence Diagram](./documents/sq_JEE.png)
 
-## Microservices
+## Setting Up Microservices
 
 ### 1. Login Service
 - **Description:** This service handles user registration, login, and management.
 - **Features:**
     - Registration of a new user with information such as name, email, and password.
     - User authentication during login.
-    - Management of user sessions and authentication tokens (JWT).
 
 ### 2. Articles Service
-- **Description:** This service manages the management of articles related to space.
+- **Description:** This service manages the of articles related to space.
 - **Features:**
-    - Addition, deletion, and modification of articles by administrators.
-    - Display of available articles for users.
+    - Display daily articles for users sourced from the Spaceflight API.
+      
+### 3. Blogs Service
+- **Description:** This service manages the of blogs related to space.
+- **Features:**
+    - Display daily blogs for users sourced from the Spaceflight API.
 
-### 3. Home Service
-- **Description:** This service is responsible for displaying the latest news and articles on the homepage.
+### 4. UserBlog Service
+- **Description:** This service offers a platform for users to share blogs and ideas with others.
 - **Features:**
-    - Aggregation of the latest news and articles from various sources.
-    - Display of news and articles on the homepage in an attractive and user-friendly manner.
-
-### 4. Community Service
-- **Description:** This service provides a platform for discussion and content sharing for users.
-- **Features:**
-    - Ability for users to publish their own blogs on space-related topics.
+    - Users can publish their own blogs on space-related topics.
     - Viewing blogs published by other users.
-    - Interaction with blogs by leaving comments and reactions.
-    - Blog management by users, including editing and deleting their own blogs.
+    - deleting their own blogs.
 
 ## Project Architecture
 
