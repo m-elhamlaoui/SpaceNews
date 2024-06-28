@@ -8,8 +8,8 @@ Space News Application is a modern platform that provides the latest news and ar
 
 - [Description](#description)
 - [Diagrams](#diagrams)
-- [Project Architecture](#project-architecture)
 - [Microservices](#microservices)
+- [Project Architecture](#project-architecture)
 - [API Gateway](#api-gateway)
 - [Discovery Service (Eureka)](#discovery-service-eureka)
 - [Containerizing microservices using Docker](#containerizing-microservices-using-docker)
