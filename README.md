@@ -20,8 +20,9 @@ Space News Application is a modern platform that provides the latest news and ar
 - [10. Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
 - [11. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
 - [12. CI/CD Pipeline for Microservices Project](#CI/CD-Pipeline-for-Microservices-Project)
-- [14. Contributors](#contributors)
-- [15. License](#license)
+- [14. Deployment workflow diagram](#Deployment-workflow-diagram)
+- [15. Contributors](#contributors)
+- [16. License](#license)
 
 ## 1- Project description
 
@@ -312,7 +313,11 @@ docker build -t login-service:latest .
 cd ../apigateway
 docker build -t apigateway:latest .
 cd ../discovery-service
+ ```
+### Step 2:Deploy to Kubernetes
+Apply the Kubernetes deployment and service YAML files for each microservice:
 
+ ```sh
 docker build -t discovery-service:latest .
 kubectl apply -f kubernetes/articles-feed-service-deployment.yaml
 kubectl apply -f kubernetes/articles-feed-service-service.yaml
@@ -324,9 +329,9 @@ kubectl apply -f kubernetes/apigateway-deployment.yaml
 kubectl apply -f kubernetes/apigateway-service.yaml
 kubectl apply -f kubernetes/discovery-service-deployment.yaml
 kubectl apply -f kubernetes/discovery-service-service.yaml
-
-´´´
-#CI/CD Pipeline for Microservices Project
+ ```
+ 
+## CI/CD Pipeline for Microservices Project
 
 This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
@@ -382,6 +387,8 @@ To manually deploy the services to your EKS cluster, you can use the following c
 
 ```sh
 kubectl apply -f k8s/
+```
+## Deployment workflow diagram
 
 
 ## Contributors
