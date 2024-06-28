@@ -20,6 +20,7 @@ Space News Application is a modern platform that provides the latest news and ar
 - [deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
 - [Installation](#installation)
 - [Usage](#usage)
+- [CI/CD Pipeline for Microservices Project](#CI/CD-Pipeline-for-Microservices-Project)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
 - [License](#license)
@@ -204,19 +205,62 @@ Docker is a **containerization technology** that allows developers to package an
 
    ```sh
    docker-compose up --build
+# CI/CD Pipeline for Microservices Project
 
-## Usage
+This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
-### Access the application via the Gateway:
-http://localhost:8080
-### Access Eureka (Discovery Service):
-http://localhost:8761
-### Main Endpoints:
-- Login Service: http://localhost:8080/login
-- Articles Service: http://localhost:8080/articles
-- Home Service: http://localhost:8080/home
-- Community Service: http://localhost:8080/community
+## Prerequisites
 
+- Docker Hub account
+- AWS account with EKS cluster named `spacenews` in the `eu-north-1` region
+- GitHub repository with the necessary secrets configured
+
+## CI/CD Pipeline
+
+The CI/CD pipeline is defined in `.github/workflows/ci-cd-pipeline.yml` and consists of two jobs: `build-and-push` and `deploy`.
+
+### build-and-push Job
+
+This job runs on every push to the `main` branch and performs the following steps:
+
+1. **Checkout code**: Retrieves the latest code from the repository.
+2. **Set up JDK 17**: Configures the Java Development Kit version 17 using AdoptOpenJDK.
+3. **Set execute permission for Maven Wrapper**: Ensures the Maven Wrapper script is executable.
+4. **Build Docker images for services**: Uses Maven and Jib to build Docker images for each microservice.
+5. **List Docker images**: Lists the Docker images created.
+6. **Log in to Docker Hub**: Logs in to Docker Hub using the provided credentials.
+7. **Push Docker images to Docker Hub**: Pushes the Docker images to Docker Hub.
+
+### deploy Job
+
+This job runs after the `build-and-push` job and performs the following steps:
+
+1. **Checkout code**: Retrieves the latest code from the repository.
+2. **Configure AWS credentials**: Sets up AWS credentials for accessing EKS.
+3. **Update kubeconfig for Amazon EKS**: Updates the kubeconfig file to interact with the EKS cluster.
+4. **Deploy to Amazon EKS**: Applies the Kubernetes deployment YAML files to the EKS cluster.
+
+## GitHub Secrets
+
+The following GitHub secrets are configured for the pipeline to work:
+
+- `DOCKER_HUB_USERNAME`: Your Docker Hub username.
+- `DOCKER_HUB_ACCESS_TOKEN`: Your Docker Hub access token.
+- `AWS_ACCESS_KEY_ID`: Your AWS access key ID.
+- `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key.
+
+## Docker Images
+
+The Docker images for the microservices are built using Maven and Jib, and are tagged with the `latest` tag. These images are pushed to Docker Hub and are used in the Kubernetes deployment.
+
+## Kubernetes Deployment
+
+The Kubernetes deployment files are located in the `k8s` directory. These files define the deployment and service configurations for each microservice, as well as the PostgreSQL database and frontend.
+
+To manually deploy the services to your EKS cluster, you can use the following command:
+
+```sh
+kubectl apply -f k8s/
 
 ### Technologies Used
 1. **Backend:**
