@@ -105,7 +105,7 @@ public class ApiGatewayApplication {
     }
 }
 ```
-- Add some configuration :
+- Add some configuration (application.properties) :
 ```bash
 spring.application.name=api-gateway
 eureka.client.serviceUrl.defaultZone=http://localhost:8763/eureka
