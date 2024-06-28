@@ -8,10 +8,10 @@ Space News Application is a modern platform that provides the latest news and ar
 
 - [1. Description](#description)
 - [2. Diagrams](#diagrams)
-- [3. Setting Up Microservices](#microservices)
-- [4. Project Architecture](#project-architecture)
-- [5. Communication between microservices using api gateway](#api-gateway)
-- [6. Discovery Service (Eureka)](#discovery-service-eureka)
+- [3. Microservices](#microservices)
+- [4. Communication between microservices using api gateway](#api-gateway)
+- [5. Discovery Service (Eureka)](#discovery-service-eureka)
+- [6. Project Architecture](#project-architecture)
 - [7. Containerizing microservices using Docker](#containerizing-microservices-using-docker)
   - [1. Docker — Overview](#1-docker--overview)
   - [2. Set Up](#2-set-up)
@@ -59,17 +59,41 @@ Sequence Diagram
     - deleting their own blogs.
 
 ## Communication between microservices using API Gateway (Spring Cloud Gateway)
-After creating all microservices, we utilize an API Gateway which is Spring Cloud Gateway to manage and route HTTP requests between them. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
+Spring Cloud Gateway is an API gateway that serves as a single entry point for all client requests to backend microservices. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
 
-- Configure the API Gateway to route requests to the appropriate microservices.
-- Use the API Gateway's URL in your service class to send requests to other microservices.
-- Call the microservice via the API Gateway.
-  
-**Basic Configuration**
+### How it Works
+
+1. *Routing*:
+    - Spring Cloud Gateway uses routes to direct HTTP requests to appropriate services. Each route is defined with a set of predicates (conditions) and filters (transformations).
+
+2. *Predicates*:
+    - Predicates determine if a request matches a specific route. For example, a predicate may check the URL path, request headers, query parameters, etc.
+
+3. *Filters*:
+    - Filters allow modifying the request or response. For example, they can add or remove headers, rewrite URL paths, redirect requests, handle errors, and limit the rate.
+
+4. *Integration with Eureka*:
+    - Spring Cloud Gateway can integrate with Eureka for dynamic service discovery. This enables routing requests to appropriate service instances without statically configuring service addresses.
+
+### Advantages
+
+- *Security*:
+    - Centralize security management to authenticate and authorize requests before they reach the microservices.
+
+- *CORS Management*:
+    - Facilitate Cross-Origin Request Sharing management by configuring global CORS rules.
+
+- *Rate Limiting*:
+    - Protect microservices from overloads by limiting the number of requests each client can make within a given period.
+
+- *Observability*:
+    - Collect metrics and logs on network traffic to monitor performance and diagnose issues.
+
+### Basic Configuration
 
 To configure Spring Cloud Gateway in a Spring Boot project, you need to add the necessary dependencies and define routes in the application.yml file.
 
-**Maven Dependencies**
+#### Maven Dependencies
 
 Add the following dependencies to your pom.xml file:
 
@@ -78,6 +102,7 @@ Add the following dependencies to your pom.xml file:
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-gateway</artifactId>
  </dependency>
+ ```
 
 ## Eureka (Discovery Service)
 
