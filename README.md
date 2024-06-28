@@ -34,12 +34,6 @@ Use Case
 Sequence Diagram
 ![Sequence Diagram](./documents/sq_JEE.png)
 
-## Project Architecture
-
-The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
-
-![Architecture Diagram](./documents/architecture.jpg)
-
 ## Microservices
 
 ### 1. Login Service
@@ -68,6 +62,12 @@ The application is designed using a microservices architecture. The different mi
     - Viewing blogs published by other users.
     - Interaction with blogs by leaving comments and reactions.
     - Blog management by users, including editing and deleting their own blogs.
+
+## Project Architecture
+
+The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
+
+![Architecture Diagram](./documents/architecture.jpg)
 
 
 ## Eureka (Discovery Service)
