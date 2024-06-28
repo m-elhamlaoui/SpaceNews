@@ -65,6 +65,8 @@ Before you begin, ensure you have the following installed on your machine:
 - Java Development Kit (JDK) 11 or later
 - Apache Maven 3.6.0 or later
 - Docker (for running databases and other services)
+- Configure docker-compose file by adding Postgres and PGAdmin (GUI) images.
+- Connecting to DB using PGAdmin
 
 ## Project Architecture
 
