@@ -8,11 +8,9 @@ Space News Application is a modern platform that provides the latest news and ar
 
 - [1. Description](#description)
 - [2. Diagrams](#diagrams)
-- [3. Setting Up Microservices](#setting-up-microservices)
-  - [1. Overview](#1-overview)
-  - [2. Prequeries](#2-prequeries)
+- [3. Setting Up Microservices](#microservices)
 - [4. Project Architecture](#project-architecture)
-- [5. Communication between microservices using](#api-gateway)
+- [5. Communication between microservices using api gateway](#api-gateway)
 - [6. Discovery Service (Eureka)](#discovery-service-eureka)
 - [7. Containerizing microservices using Docker](#containerizing-microservices-using-docker)
   - [1. Docker — Overview](#1-docker--overview)
@@ -36,44 +34,50 @@ Use Case
 Sequence Diagram
 ![Sequence Diagram](./documents/sq_JEE.png)
 
-## Setting Up Microservices
-  ### 1. Overview
-
-**Login Service**: This service handles user registration, login, and management.
+## Microservices
+### 1. Login Service
+- **Description:** This service handles user registration, login, and management.
 - **Features:**
     - Registration of a new user with information such as name, email, and password.
     - User authentication during login.
 
-**Articles Service**: This service manages the of articles related to space.
+### 2. Articles Service
+- **Description:** This service manages the of articles related to space.
 - **Features:**
     - Display daily articles for users sourced from the Spaceflight API.
-      
-**Blogs Service**: This service manages the of blogs related to space.
+    - 
+### 3. Blogs Service
+- **Description:** This service manages the of blogs related to space.
 - **Features:**
     - Display daily blogs for users sourced from the Spaceflight API.
 
-**UserBlog Service**: This service offers a platform for users to share blogs and ideas with others.
+### 4. UserBlog Service
+- **Description** This service offers a platform for users to share blogs and ideas with others.
 - **Features:**
     - Users can publish their own blogs on space-related topics.
     - Viewing blogs published by other users.
     - deleting their own blogs.
- 
-  ### 2. Prequeries
 
-Before you begin, ensure you have the following installed on your machine:
+## Communication between microservices using API Gateway (Spring Cloud Gateway)
+After creating all microservices, we utilize an API Gateway which is Spring Cloud Gateway to manage and route HTTP requests between them. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
 
-- Java Development Kit (JDK) 11 or later
-- Apache Maven 3.6.0 or later
-- Docker (for running databases and other services)
-- Configure docker-compose file by adding Postgres and PGAdmin (GUI) images.
-- Connecting to DB using PGAdmin
+- Configure the API Gateway to route requests to the appropriate microservices.
+- Use the API Gateway's URL in your service class to send requests to other microservices.
+- Call the microservice via the API Gateway.
+  
+**Basic Configuration**
 
-## Project Architecture
+To configure Spring Cloud Gateway in a Spring Boot project, you need to add the necessary dependencies and define routes in the application.yml file.
 
-The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
+**Maven Dependencies**
 
-![Architecture Diagram](./documents/architecture.jpg)
+Add the following dependencies to your pom.xml file:
 
+    ```xml
+ <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-gateway</artifactId>
+ </dependency>
 
 ## Eureka (Discovery Service)
 
@@ -144,28 +148,12 @@ public class ExampleMicroserviceApplication {
     }
 }
 ```
+ ## Project Architecture
 
-## Communication between microservices using API Gateway (Spring Cloud Gateway)
-After creating all microservices, we utilize an API Gateway which is Spring Cloud Gateway to manage and route HTTP requests between them. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
+The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
 
-- Configure the API Gateway to route requests to the appropriate microservices.
-- Use the API Gateway's URL in your service class to send requests to other microservices.
-- Call the microservice via the API Gateway.
-  
-**Basic Configuration**
+![Architecture Diagram](./documents/architecture.jpg)
 
-To configure Spring Cloud Gateway in a Spring Boot project, you need to add the necessary dependencies and define routes in the application.yml file.
-
-**Maven Dependencies**
-
-Add the following dependencies to your pom.xml file:
-
-    ```xml
- <dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-gateway</artifactId>
- </dependency>
- 
 ## Installation
 
 ### Prerequisites
