@@ -6,7 +6,7 @@ Space News Application is a modern platform that provides the latest news and ar
 
 ## Table of Contents
 
-- [1. Description of project](#description)
+- [1. Project description](#description)
 - [2. UML Diagrams](#diagrams)
 - [3. Microservices](#microservices)
 - [4. Communication between microservices](#api-gateway)
@@ -24,11 +24,11 @@ Space News Application is a modern platform that provides the latest news and ar
 - [14. Contributors](#contributors)
 - [15. License](#license)
 
-## Description
+## 1- Project description
 
-The Space News application stands out for its modular and scalable design, allowing efficient feature management and easy extensibility. Leveraging modern technologies such as Spring Boot, Spring Cloud, PostgreSQL, and Docker, the application delivers optimal performance and simplified maintenance.
+The Space News application excels with its modular and scalable design, enabling efficient feature management and easy extensibility. It utilizes modern technologies like Spring Boot, Spring Cloud, PostgreSQL, and Docker, ensuring optimal performance and simplified maintenance. With a microservices architecture, the application enhances scalability and maintainability. The backend is developed using Spring Boot, while the frontend employs HTML, CSS, and JavaScript.
 
-## Diagrams
+## 2- UML diagrams
 Use Case
 ![Use Case](./documents/uc_JEE.jpeg)
 Sequence Diagram
@@ -89,20 +89,63 @@ Spring Cloud Gateway is an API gateway that serves as a single entry point for a
 - *Observability*:
     - Collect metrics and logs on network traffic to monitor performance and diagnose issues.
 
-### Basic Configuration
-
-To configure Spring Cloud Gateway in a Spring Boot project, you need to add the necessary dependencies and define routes in the application.yml file.
-
-#### Maven Dependencies
-
-Add the following dependencies to your pom.xml file:
-
-    ```xml
+### How do I get set up?
+- Add Spring Cloud dependency:
+ ```xml
  <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-gateway</artifactId>
  </dependency>
  ```
+```bash
+@SpringBootApplication
+public class ApiGatewayApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ApiGatewayApplication.class, args);
+    }
+}
+```
+- Add some configuration :
+```bash
+spring.application.name=api-gateway
+eureka.client.serviceUrl.defaultZone=http://localhost:8763/eureka
+app.eureka-server=localhost
+server.port=9000
+eureka.instance.prefer-ip-address=true
+
+
+spring.cloud.gateway.discovery.locator.enabled=true
+
+## articles Service Route
+spring.cloud.gateway.routes[0].id= articles-feed-service
+spring.cloud.gateway.routes[0].predicates[0]=Path=/articles/**
+spring.cloud.gateway.routes[0].uri=lb://articles-feed-service
+
+## articles Service Route
+spring.cloud.gateway.routes[4].id= blog-cr-service
+spring.cloud.gateway.routes[4].predicates[0]=Path=/blogCr/**
+spring.cloud.gateway.routes[4].uri=lb://blog-cr-service
+
+
+spring.cloud.gateway.routes[3].id=home-page
+spring.cloud.gateway.routes[3].uri=file:///C:/Users/hp/SpaceNews/articles_feed_service/src/main/resources/templates/home.html
+spring.cloud.gateway.routes[3].predicates[0]=Path=/home
+
+
+## blogs Service Route
+spring.cloud.gateway.routes[1].id=spacenews
+spring.cloud.gateway.routes[1].predicates[0]=Path=/blogs/**
+spring.cloud.gateway.routes[1].uri=lb://spacenews
+
+
+## login Service Route
+spring.cloud.gateway.routes[2].id=login
+spring.cloud.gateway.routes[2].predicates[0]=Path=/login/**
+spring.cloud.gateway.routes[2].uri=lb://login
+```
+
+
+
 
 ## Discovery Service (Eureka)
 
