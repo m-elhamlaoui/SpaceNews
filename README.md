@@ -28,14 +28,6 @@ Space News Application is a modern platform that provides the latest news and ar
 
 The Space News application stands out for its modular and scalable design, allowing efficient feature management and easy extensibility. Leveraging modern technologies such as Spring Boot, Spring Cloud, PostgreSQL, and Docker, the application delivers optimal performance and simplified maintenance.
 
-## Features
-
-- User management and authentication (Login Microservice)
-- Display of articles about space (Articles Microservice)
-- Homepage with the latest news (Home Microservice)
-- Community for discussions and interactions (Community Microservice)
-- Chatbot assistant to answer user questions
-
 ## Diagrams
 Use Case
 ![Use Case](./documents/uc_JEE.jpeg)
