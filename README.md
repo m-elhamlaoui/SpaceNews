@@ -1,4 +1,4 @@
-# Space News Application
+ # Space News Application
 
 # Space News Application
 
@@ -8,7 +8,7 @@ Space News Application is a modern platform that provides the latest news and ar
 
 ## Table of Contents
 
-- [1. Project Description](#1.project-description)
+- [1. Project Description](#1-project-description)
 - [2. Technologies Used](#technologies-used)
 - [3. UML Diagrams](#uml-diagrams)
 - [4. Microservices](#microservices)
