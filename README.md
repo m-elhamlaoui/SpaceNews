@@ -338,7 +338,7 @@ kubectl apply -f kubernetes/discovery-service-deployment.yaml
 kubectl apply -f kubernetes/discovery-service-service.yaml
  ```
  
-## 11. CI/CD Pipeline for Microservices Project
+## 11. CI/CD Pipeline
 
 This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
