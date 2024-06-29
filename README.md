@@ -1,121 +1,126 @@
 # Space News Application
 
+# Space News Application
+
 ## Overview
 
 Space News Application is a modern platform that provides the latest news and articles about space. Based on a microservices architecture and integrating a chatbot assistant, this application offers a rich and interactive user experience for astronomy and space exploration enthusiasts.
 
 ## Table of Contents
 
-- [1. Project description](#description)
+- [1. Project Description](#project-description)
 - [2. Technologies Used](#technologies-used)
-- [3.UML Diagrams](#diagrams)
+- [3. UML Diagrams](#uml-diagrams)
 - [4. Microservices](#microservices)
-- [5. Communication between microservices](#api-gateway)
+- [5. Communication Between Microservices](#communication-between-microservices)
 - [6. Discovery Service (Eureka)](#discovery-service-eureka)
 - [7. Project Architecture](#project-architecture)
 - [8. Installation](#installation)
-- [9. Containerizing microservices using Docker](#containerizing-microservices-using-docker)
-  - [1. Docker — Overview](#1-docker--overview)
-  - [2. Set Up](#2-set-up)
-- [10. Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
-- [11. CI/CD Pipeline for Microservices Project](#ci/cd-pipeline-for-microservices-project)
-- [12. GitHub Secrets](#gihHub_secrets)
-- [13. Docker Images](#docker_images)
-- [12. GitHub Secrets](#gihHub_secrets)
-- [12. Kubernetes Deployment](#kubernetes_deployment)
-- [13. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
-- [14. Deployment workflow diagram](#Deployment-workflow-diagram)
-- [15. Contributors](#contributors)
-- [16. License](#license)
+- [9. Containerizing Microservices Using Docker](#containerizing-microservices-using-docker)
+  - [1. Docker — Overview](#docker--overview)
+  - [2. Set Up](#set-up)
+- [10. Deploy Microservices to Local Kubernetes](#deploy-microservices-to-local-kubernetes)
+- [11. CI/CD Pipeline for Microservices Project](#ci-cd-pipeline-for-microservices-project)
+- [12. GitHub Secrets](#github-secrets)
+- [13. Docker Images](#docker-images)
+- [14. Kubernetes Deployment](#kubernetes-deployment)
+- [15. Deploy Microservices to EKS Cluster Using GitHub Actions](#deploy-microservices-to-eks-cluster-using-github-actions)
+- [16. Deployment Workflow Diagram](#deployment-workflow-diagram)
+- [17. Contributors](#contributors)
+- [18. License](#license)
 
-## 1. Project description
+## 1. Project Description
 
 The Space News application excels with its modular and scalable design, enabling efficient feature management and easy extensibility. It utilizes modern technologies like Spring Boot, Spring Cloud, PostgreSQL, and Docker, ensuring optimal performance and simplified maintenance. With a microservices architecture, the application enhances scalability and maintainability. The backend is developed using Spring Boot, while the frontend employs HTML, CSS, and JavaScript.
+
 ## 2. Technologies Used
-1. **Backend:**
+
+### Backend:
 - Spring Boot
 - Spring Cloud Gateway
 - Spring Security
 - Spring Data JPA
-- Database:
-- PostgreSQL
-2. **Frontend:**
+- **Database**:
+  - PostgreSQL
+
+### Frontend:
 - HTML
 - CSS
 - Bootstrap
-- Chatbot:
-- SAP Conversational AI
-- Discovery Service:
-- Eureka
+- **Chatbot**:
+  - SAP Conversational AI
+- **Discovery Service**:
+  - Eureka
 
-## 3. UML diagrams
-Use Case
-![Use Case](./documents/uc.jpg)
-Sequence Diagram
-![Sequence Diagram](./documents/seq3.jpg)
+## 3. UML Diagrams
+- **Use Case**
+  ![Use Case](./documents/uc.jpg)
+- **Sequence Diagram**
+  ![Sequence Diagram](./documents/seq3.jpg)
 
 ## 4. Microservices
+
 ### 1. Login Service
 - **Description:** This service handles user registration, login, and management.
 - **Features:**
-    - Registration of a new user with information such as name, email, and password.
-    - User authentication during login.
+  - Registration of a new user with information such as name, email, and password.
+  - User authentication during login.
 
 ### 2. Articles Service
-- **Description:** This service manages the of articles related to space.
+- **Description:** This service manages articles related to space.
 - **Features:**
-    - Display daily articles for users sourced from the Spaceflight API.
-    - 
+  - Display daily articles for users sourced from the Spaceflight API.
+
 ### 3. Blogs Service
-- **Description:** This service manages the of blogs related to space.
+- **Description:** This service manages blogs related to space.
 - **Features:**
-    - Display daily blogs for users sourced from the Spaceflight API.
+  - Display daily blogs for users sourced from the Spaceflight API.
 
 ### 4. UserBlog Service
-- **Description** This service offers a platform for users to share blogs and ideas with others.
+- **Description:** This service offers a platform for users to share blogs and ideas with others.
 - **Features:**
-    - Users can publish their own blogs on space-related topics.
-    - Viewing blogs published by other users.
-    - deleting their own blogs.
+  - Users can publish their own blogs on space-related topics.
+  - View blogs published by other users.
+  - Delete their own blogs.
 
-## 5. Communication between microservices
-Spring Cloud Gateway is an API gateway that serves as a single entry point for all client requests to backend microservices. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
+## 5. Communication Between Microservices
+Spring Cloud Gateway serves as a single entry point for all client requests to backend microservices, providing features such as request routing, CORS management, resilience, security, and rate limiting.
 
 ### How it Works
 
-1. *Routing*:
-    - Spring Cloud Gateway uses routes to direct HTTP requests to appropriate services. Each route is defined with a set of predicates (conditions) and filters (transformations).
+1. **Routing**:
+   - Uses routes to direct HTTP requests to appropriate services. Each route is defined with a set of predicates and filters.
 
-2. *Predicates*:
-    - Predicates determine if a request matches a specific route. For example, a predicate may check the URL path, request headers, query parameters, etc.
+2. **Predicates**:
+   - Determine if a request matches a specific route, checking URL path, request headers, query parameters, etc.
 
-3. *Filters*:
-    - Filters allow modifying the request or response. For example, they can add or remove headers, rewrite URL paths, redirect requests, handle errors, and limit the rate.
+3. **Filters**:
+   - Modify the request or response, e.g., adding or removing headers, rewriting URL paths, redirecting requests, handling errors, and limiting the rate.
 
-4. *Integration with Eureka*:
-    - Spring Cloud Gateway can integrate with Eureka for dynamic service discovery. This enables routing requests to appropriate service instances without statically configuring service addresses.
+4. **Integration with Eureka**:
+   - Enables routing requests to appropriate service instances without statically configuring service addresses.
 
 ### Advantages
 
-- *Security*:
-    - Centralize security management to authenticate and authorize requests before they reach the microservices.
+- **Security**:
+  - Centralizes security management to authenticate and authorize requests before they reach the microservices.
 
-- *CORS Management*:
-    - Facilitate Cross-Origin Request Sharing management by configuring global CORS rules.
+- **CORS Management**:
+  - Facilitates Cross-Origin Request Sharing management by configuring global CORS rules.
 
-- *Rate Limiting*:
-    - Protect microservices from overloads by limiting the number of requests each client can make within a given period.
+- **Rate Limiting**:
+  - Protects microservices from overloads by limiting the number of requests each client can make within a given period.
 
-- *Observability*:
-    - Collect metrics and logs on network traffic to monitor performance and diagnose issues.
+- **Observability**:
+  - Collects metrics and logs on network traffic to monitor performance and diagnose issues.
 
-### How do I get set up?
+### Setup
 - Add Spring Cloud dependency:
- ```xml
- <dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-gateway</artifactId>
- </dependency>
+  ```xml
+  <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-gateway</artifactId>
+  </dependency>
  ```
 ```bash
 @SpringBootApplication
