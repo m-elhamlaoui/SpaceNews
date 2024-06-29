@@ -18,7 +18,7 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. Docker — Overview](#docker--overview)
   - [2. Set Up](#set-up)
 - [10. Deploy Microservices to Local Kubernetes](#10-deploy-microservices-to-local-kubernetes)
-- [11. CI/CD Pipeline for Microservices Project](#11-ci-cd-pipeline-for-microservices-project)
+- [11. CI-CD Pipeline for Microservices Project](#11-ci-cd-pipeline-for-microservices-project)
   - [1. GitHub Secrets](#github-secrets)
   - [2. Docker Images](#docker-images)
   - [3. Kubernetes Deployment](#kubernetes-deployment)
@@ -398,6 +398,51 @@ kubectl apply -f k8s/
 ![services deployed sucessfully in EKS](./documents/kube.jpg)
 
 ## 12. Deploy Microservices to EKS Cluster Using GitHub Actions
+
+### Step 1: Create an EKS Cluster
+
+1. **Log in to AWS Console:** Navigate to the AWS Management Console.
+   
+2. **Open Amazon EKS Console:** Go to the Amazon EKS service.
+   
+3. **Create Cluster:**
+   - Click on "Create cluster".
+   - Choose configuration (region, version, instance types).
+   - Set cluster name as `spacenews`.
+
+### Step 2: Set Up IAM Roles
+
+1. **Create IAM Role for EKS Nodes:**
+   - Navigate to IAM service.
+   - Create IAM role for EKS worker nodes.
+   - Attach necessary policies (e.g., AmazonEKSWorkerNodePolicy).
+
+2. **Create IAM Role for Kubernetes Service Account:**
+   - Create IAM role for Kubernetes service accounts if needed.
+   - Attach policies for required permissions.
+
+### Step 3: Configure `kubectl` for EKS Cluster
+
+1. **Install `kubectl`:** Install `kubectl` CLI tool if not installed.
+
+2. **Configure `kubectl`:**
+   - Use AWS CLI to update `kubectl` configuration:
+     ```bash
+     aws eks --region <region-code> update-kubeconfig --name spacenews
+     ```
+   - Replace `<region-code>` with your AWS region.
+
+### Step 4: Verify Cluster Setup
+
+1. **Verify Cluster:**
+   - Check cluster status:
+     ```bash
+     kubectl get clusters
+     kubectl get nodes
+     ```
+![ the EKS Cluster](./documents/ekscluster.png)
+2. **Deploy Applications:**
+   - Proceed with deploying microservices to the EKS cluster.
 ## 13. Deployment workflow diagram
 ![ Deployment workflow diagram](./documents/deployement_workflow.png)
 
