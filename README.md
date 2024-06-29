@@ -20,14 +20,14 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. Docker — Overview](#docker--overview)
   - [2. Set Up](#set-up)
 - [10. Deploy Microservices to Local Kubernetes](#10-deploy-microservices-to-local-kubernetes)
-- [11. CI/CD Pipeline for Microservices Project](#11-ci_cd_pipeline_for_microservices_project)
-- [12. GitHub Secrets](#12-github-secrets)
-- [13. Docker Images](#13-docker-images)
-- [14. Kubernetes Deployment](#14-kubernetes-deployment)
-- [15. Deploy Microservices to EKS Cluster Using GitHub Actions](#15-deploy-microservices-to-eks-cluster-using-github-actions)
-- [16. Deployment Workflow Diagram](#16-deployment-workflow-diagram)
-- [17. Contributors](#17-contributors)
-- [18. License](#18-license)
+- [11. CI/CD Pipeline for Microservices Project](#11-ci-cd-pipeline-for-microservices-project)
+  - [1. GitHub Secrets](#github-secrets)
+  - [2. Docker Images](#docker-images)
+  - [3. Kubernetes Deployment](#kubernetes-deployment)
+- [12. Deploy Microservices to EKS Cluster Using GitHub Actions](#15-deploy-microservices-to-eks-cluster-using-github-actions)
+- [13. Deployment Workflow Diagram](#16-deployment-workflow-diagram)
+- [14. Contributors](#17-contributors)
+- [15. License](#18-license)
 
 ## 1. Project Description
 
@@ -375,7 +375,7 @@ This job runs after the `build-and-push` job and performs the following steps:
 3. **Update kubeconfig for Amazon EKS**: Updates the kubeconfig file to interact with the EKS cluster.
 4. **Deploy to Amazon EKS**: Applies the Kubernetes deployment YAML files to the EKS cluster.
 
-## 12. GitHub Secrets
+### GitHub Secrets
 
 The following GitHub secrets are configured for the pipeline to work:
 
@@ -384,11 +384,11 @@ The following GitHub secrets are configured for the pipeline to work:
 - `AWS_ACCESS_KEY_ID`: Your AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key.
 
-## 13. Docker Images
+### Docker Images
 
 The Docker images for the microservices are built using Maven and Jib, and are tagged with the `latest` tag. These images are pushed to Docker Hub and are used in the Kubernetes deployment.
 
-## 14. Kubernetes Deployment
+### Kubernetes Deployment
 
 The Kubernetes deployment files are located in the `k8s` directory. These files define the deployment and service configurations for each microservice, as well as the PostgreSQL database and frontend.
 
