@@ -46,9 +46,9 @@ The Space News application excels with its modular and scalable design, enabling
 
 ## 2- UML diagrams
 Use Case
-![Use Case](./documents/uc_JEE.jpeg)
+![Use Case](./documents/uc.jpg)
 Sequence Diagram
-![Sequence Diagram](./documents/sq_JEE.png)
+![Sequence Diagram](./documents/seq.jpeg)
 
 ## Microservices
 ### 1. Login Service
