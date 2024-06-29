@@ -18,7 +18,7 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. Docker — Overview](#docker--overview)
   - [2. Set Up](#set-up)
 - [10. Deploy Microservices to Local Kubernetes](#10-deploy-microservices-to-local-kubernetes)
-- [11. CI/CD Pipeline](#ci-cd-pipeline)
+- [11. CI and CD Pipeline](#ci-and-cd-pipeline)
   - [1. GitHub Secrets](#github-secrets)
   - [2. Docker Images](#docker-images)
   - [3. Kubernetes Deployment](#kubernetes-deployment)
@@ -338,7 +338,7 @@ kubectl apply -f kubernetes/discovery-service-deployment.yaml
 kubectl apply -f kubernetes/discovery-service-service.yaml
  ```
  
-## 11. CI/CD Pipeline
+## 11. CI and CD Pipeline
 
 This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
