@@ -397,10 +397,9 @@ kubectl apply -f k8s/
 
 
 ## Contributors
-- EL ADES Salma - @SAMAME2003
 - FAJOUI Basma - @FAJOUIBasma
 - MOUL EL KHAYL Fatima zahra - @fatimamlk
-
+- EL ADES Salma - @SAMAME2003
 
 
 
