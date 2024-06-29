@@ -440,7 +440,7 @@ kubectl apply -f k8s/
      kubectl get clusters
      kubectl get nodes
      ```
-![ the EKS Cluster](./documents/Capture d'écran 2024-06-29 012127.png).
+![ the EKS Cluster](./documents/ekscluster.jpg).
 2. **Deploy Applications:**
    - Proceed with deploying microservices to the EKS cluster.
 ## 13. Deployment workflow diagram
