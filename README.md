@@ -397,7 +397,7 @@ To manually deploy the services to your EKS cluster, you can use the following c
 ```sh
 kubectl apply -f k8s/
 ```
-## 15. Deployment workflow diagram
+## 16. Deployment workflow diagram
 ![ Deployment workflow diagram](./documents/deployement_workflow.png)
 
 
