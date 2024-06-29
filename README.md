@@ -7,8 +7,8 @@ Space News Application is a modern platform that provides the latest news and ar
 ## Table of Contents
 
 - [1. Project description](#description)
-- [2.Technologies Used](#technologies-used)
-- [3. UML Diagrams](#diagrams)
+- [2. Technologies Used](#technologies-used)
+- [3.UML Diagrams](#diagrams)
 - [4. Microservices](#microservices)
 - [5. Communication between microservices](#api-gateway)
 - [6. Discovery Service (Eureka)](#discovery-service-eureka)
@@ -18,16 +18,20 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. Docker — Overview](#1-docker--overview)
   - [2. Set Up](#2-set-up)
 - [10. Deploy microservices to local Kubernetes](#deploy-microservices-to-local-kubernetes)
-- [11. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
-- [12. CI/CD Pipeline for Microservices Project](#ci/cd-pipeline-for-microservices-project)
+- [11. CI/CD Pipeline for Microservices Project](#ci/cd-pipeline-for-microservices-project)
+- [12. GitHub Secrets](#gihHub_secrets)
+- [13. Docker Images](#docker_images)
+- [12. GitHub Secrets](#gihHub_secrets)
+- [12. Kubernetes Deployment](#kubernetes_deployment)
+- [13. deploy microservices to EKS cluster using git actions](#deploy-microservices-to-EKS-cluster-using-git-actions)
 - [14. Deployment workflow diagram](#Deployment-workflow-diagram)
 - [15. Contributors](#contributors)
 - [16. License](#license)
 
-## 1- Project description
+## 1. Project description
 
 The Space News application excels with its modular and scalable design, enabling efficient feature management and easy extensibility. It utilizes modern technologies like Spring Boot, Spring Cloud, PostgreSQL, and Docker, ensuring optimal performance and simplified maintenance. With a microservices architecture, the application enhances scalability and maintainability. The backend is developed using Spring Boot, while the frontend employs HTML, CSS, and JavaScript.
-## Technologies Used
+## 2. Technologies Used
 1. **Backend:**
 - Spring Boot
 - Spring Cloud Gateway
@@ -44,13 +48,13 @@ The Space News application excels with its modular and scalable design, enabling
 - Discovery Service:
 - Eureka
 
-## 2- UML diagrams
+## 3. UML diagrams
 Use Case
 ![Use Case](./documents/uc.jpg)
 Sequence Diagram
 ![Sequence Diagram](./documents/seq3.jpg)
 
-## Microservices
+## 4. Microservices
 ### 1. Login Service
 - **Description:** This service handles user registration, login, and management.
 - **Features:**
@@ -74,7 +78,7 @@ Sequence Diagram
     - Viewing blogs published by other users.
     - deleting their own blogs.
 
-## Communication between microservices
+## 5. Communication between microservices
 Spring Cloud Gateway is an API gateway that serves as a single entry point for all client requests to backend microservices. It provides various features such as request routing, CORS management, resilience, security, and rate limiting.
 
 ### How it Works
@@ -163,7 +167,7 @@ spring.cloud.gateway.routes[2].uri=lb://login
 
 
 
-## Discovery Service (Eureka)
+## 6. Discovery Service (Eureka)
 
 Spring Cloud Eureka is a discovery service that allows applications to find and communicate with each other without needing to know their exact locations. This is particularly useful in a microservices architecture where service instances can dynamically change due to scaling, deployment, or failures.
 
@@ -232,12 +236,12 @@ public class ExampleMicroserviceApplication {
     }
 }
 ```
- ## Project Architecture
+ ## 7. Project Architecture
 
 The application is designed using a microservices architecture. The different microservices communicate with each other via an API Gateway (Spring Cloud Gateway) and are registered in the Eureka discovery service.
 
 ![Architecture Diagram](./documents/arch.png)
-## Installation
+## 8. Installation
 
 ### Prerequisites
 
@@ -275,7 +279,7 @@ The application is designed using a microservices architecture. The different mi
    mvn spring-boot:run
 
 
-## Containerizing microservices using Docker
+## 9. Containerizing microservices using Docker
 
 ### 1. Docker — Overview
 
@@ -295,7 +299,7 @@ Docker is a **containerization technology** that allows developers to package an
 
    ```sh
    docker-compose up --build
-## Deploy microservices to local Kubernetes
+## 10. Deploy microservices to local Kubernetes
 
 ### Step 1: Start Minikube
 
@@ -331,7 +335,7 @@ kubectl apply -f kubernetes/discovery-service-deployment.yaml
 kubectl apply -f kubernetes/discovery-service-service.yaml
  ```
  
-## CI/CD Pipeline for Microservices Project
+## 11. CI/CD Pipeline for Microservices Project
 
 This project uses a CI/CD pipeline to automate the build, test, and deployment processes for a microservices architecture using Spring Boot. The pipeline leverages GitHub Actions, Docker, and Amazon EKS for continuous integration and continuous deployment.
 
@@ -366,7 +370,7 @@ This job runs after the `build-and-push` job and performs the following steps:
 3. **Update kubeconfig for Amazon EKS**: Updates the kubeconfig file to interact with the EKS cluster.
 4. **Deploy to Amazon EKS**: Applies the Kubernetes deployment YAML files to the EKS cluster.
 
-## GitHub Secrets
+## 12. GitHub Secrets
 
 The following GitHub secrets are configured for the pipeline to work:
 
@@ -375,11 +379,11 @@ The following GitHub secrets are configured for the pipeline to work:
 - `AWS_ACCESS_KEY_ID`: Your AWS access key ID.
 - `AWS_SECRET_ACCESS_KEY`: Your AWS secret access key.
 
-## Docker Images
+## 13. Docker Images
 
 The Docker images for the microservices are built using Maven and Jib, and are tagged with the `latest` tag. These images are pushed to Docker Hub and are used in the Kubernetes deployment.
 
-## Kubernetes Deployment
+## 14. Kubernetes Deployment
 
 The Kubernetes deployment files are located in the `k8s` directory. These files define the deployment and service configurations for each microservice, as well as the PostgreSQL database and frontend.
 
@@ -388,7 +392,7 @@ To manually deploy the services to your EKS cluster, you can use the following c
 ```sh
 kubectl apply -f k8s/
 ```
-## Deployment workflow diagram
+## 15. Deployment workflow diagram
 ![ Deployment workflow diagram](./documents/deployement_workflow.png)
 
 
