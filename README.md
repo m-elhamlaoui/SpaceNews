@@ -1,7 +1,5 @@
  # Space News Application
 
-# Space News Application
-
 ## Overview
 
 Space News Application is a modern platform that provides the latest news and articles about space. Based on a microservices architecture and integrating a chatbot assistant, this application offers a rich and interactive user experience for astronomy and space exploration enthusiasts.
@@ -397,6 +395,8 @@ To manually deploy the services to your EKS cluster, you can use the following c
 ```sh
 kubectl apply -f k8s/
 ```
+![services deployed sucessfully in EKS](./documents/kube.jpg)
+
 ## 12. Deploy Microservices to EKS Cluster Using GitHub Actions
 ## 13. Deployment workflow diagram
 ![ Deployment workflow diagram](./documents/deployement_workflow.png)
