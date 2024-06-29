@@ -18,7 +18,7 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. Docker — Overview](#docker--overview)
   - [2. Set Up](#set-up)
 - [10. Deploy Microservices to Local Kubernetes](#10-deploy-microservices-to-local-kubernetes)
-- [11. CI--CD Pipeline for Microservices Project](#11-ci-cd-pipeline-for-microservices-project)
+- [11. CI/CD Pipeline for Microservices Project](#11-CI/CD-pipeline-for-microservices-project)
   - [1. GitHub Secrets](#github-secrets)
   - [2. Docker Images](#docker-images)
   - [3. Kubernetes Deployment](#kubernetes-deployment)
