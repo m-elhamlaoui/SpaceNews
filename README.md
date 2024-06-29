@@ -48,7 +48,7 @@ The Space News application excels with its modular and scalable design, enabling
 Use Case
 ![Use Case](./documents/uc.jpg)
 Sequence Diagram
-![Sequence Diagram](./documents/seq3.jpeg)
+![Sequence Diagram](./documents/seq3.jpg)
 
 ## Microservices
 ### 1. Login Service
