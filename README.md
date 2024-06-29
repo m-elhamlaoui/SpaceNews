@@ -24,10 +24,10 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. GitHub Secrets](#github-secrets)
   - [2. Docker Images](#docker-images)
   - [3. Kubernetes Deployment](#kubernetes-deployment)
-- [12. Deploy Microservices to EKS Cluster Using GitHub Actions](#15-deploy-microservices-to-eks-cluster-using-github-actions)
-- [13. Deployment Workflow Diagram](#16-deployment-workflow-diagram)
-- [14. Contributors](#17-contributors)
-- [15. License](#18-license)
+- [12. Deploy Microservices to EKS Cluster Using GitHub Actions](#12-deploy-microservices-to-eks-cluster-using-github-actions)
+- [13. Deployment Workflow Diagram](#13-deployment-workflow-diagram)
+- [14. Contributors](#14-contributors)
+- [15. License](#15-license)
 
 ## 1. Project Description
 
