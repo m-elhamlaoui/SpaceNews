@@ -18,7 +18,7 @@ Space News Application is a modern platform that provides the latest news and ar
   - [1. Docker — Overview](#docker--overview)
   - [2. Set Up](#set-up)
 - [10. Deploy Microservices to Local Kubernetes](#10-deploy-microservices-to-local-kubernetes)
-- [11. CI-CD Pipeline for Microservices Project](#11-ci-cd-pipeline-for-microservices-project)
+- [11. CI--CD Pipeline for Microservices Project](#11-ci-cd-pipeline-for-microservices-project)
   - [1. GitHub Secrets](#github-secrets)
   - [2. Docker Images](#docker-images)
   - [3. Kubernetes Deployment](#kubernetes-deployment)
@@ -440,7 +440,7 @@ kubectl apply -f k8s/
      kubectl get clusters
      kubectl get nodes
      ```
-![ the EKS Cluster](./documents/ekscluster.png)
+![ the EKS Cluster](./documents/Capture d'écran 2024-06-29 012127.png)
 2. **Deploy Applications:**
    - Proceed with deploying microservices to the EKS cluster.
 ## 13. Deployment workflow diagram
@@ -449,8 +449,8 @@ kubectl apply -f k8s/
 
 ## 14. Contributors
 - FAJOUI Basma - @FAJOUIBasma
-- MOUL EL KHAYL Fatima zahra - @fatimamlk
 - EL ADES Salma - @SAMAME2003
+- MOUL EL KHAiL Fatima zahra - @fatimamlk
 
 
 
