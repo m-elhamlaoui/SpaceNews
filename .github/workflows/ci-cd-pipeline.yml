@@ -22,6 +22,14 @@ jobs:
       - name: Set execute permission for Maven Wrapper
         run: chmod +x .mvn/mvnw
 
+      - name: Install Snyk CLI
+        uses: snyk/actions/setup@v2
+
+      - name: SAST Scan with Snyk
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: snyk code test --all-projects --severity-threshold=high
+
       - name: Build Docker images for services
         run: |
           ./.mvn/mvnw compile jib:dockerBuild -pl articles_feed_service -Dimage=basmafj/articles_feed_service:latest
@@ -47,7 +55,6 @@ jobs:
           docker push basmafj/blog_cr_service:latest
           docker push basmafj/apigateway:latest
           docker push basmafj/discovery_service:latest
-
   deploy:
     runs-on: ubuntu-latest
     needs: build-and-push
