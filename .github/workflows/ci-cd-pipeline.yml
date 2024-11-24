@@ -23,7 +23,7 @@ jobs:
         run: chmod +x .mvn/mvnw
 
       - name: Install Snyk CLI
-        uses: snyk/actions/setup@v2
+        uses: snyk/actions@master
 
       - name: SAST Scan with Snyk
         env:
